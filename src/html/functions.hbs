@@ -4,6 +4,7 @@ function valkyriehq_setup() {
   load_theme_textdomain( 'valkyriehq', get_template_directory() . '/languages' );
 
   add_theme_support( 'title-tag' );
+  add_theme_support( 'menus' );
   add_theme_support( 'automatic-feed-links' );
   add_theme_support( 'post-thumbnails' );
   add_theme_support( 'html5', array( 'search-form' ) );
@@ -15,11 +16,6 @@ function valkyriehq_setup() {
   global $content_width;
 
   if ( ! isset( $content_width ) ) { $content_width = 1920; }
-
-  register_nav_menus( array(
-    'main-menu' => esc_html__( 'Main menu', 'valkyriehq' ),
-    'footer-menu' => esc_html__( 'Footer menu', 'valkyriehq' )
-  ) );
 }
 
 add_action( 'wp_enqueue_scripts', 'valkyriehq_scripts' );
@@ -102,6 +98,12 @@ class bootstrap_5_wp_nav_menu_walker extends Walker_Nav_menu {
     $output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args);
   }
 }
+
+// Regsister menus
+register_nav_menus( array(
+  'main-menu' => esc_html__( 'Main menu', 'valkyriehq' ),
+  'footer-menu' => esc_html__( 'Footer menu', 'valkyriehq' )
+) );
 
 // Nav seperator
 add_filter( 'document_title_separator', 'valkyriehq_document_title_separator' );
