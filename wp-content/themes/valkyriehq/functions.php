@@ -17,8 +17,8 @@ function valkyriehq_setup() {
   if ( ! isset( $content_width ) ) { $content_width = 1920; }
 
   register_nav_menus( array(
-    'main-menu' => esc_html__( 'Main menu', 'valkyriehq' ),
-    'extra-menu' => esc_html__( 'Footer menu', 'valkyriehq' )
+    'header-menu' => esc_html__( 'Main Menu', 'valkyriehq' ),
+    'footer-menu' => esc_html__( 'Footer Menu', 'valkyriehq' )
   ) );
 }
 
