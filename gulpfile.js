@@ -28,7 +28,7 @@ export function scripts() {
     .pipe(webpack({}, compiler, function(err, stats) {}))
     .pipe(uglify())
     .pipe(concat('script.js'))
-    .pipe(gulp.dest('wp-content/themes/valkyriehq/js/'));
+    .pipe(gulp.dest('wp-content/themes/valkyriehq/'));
 }
 
 export function styles() {
