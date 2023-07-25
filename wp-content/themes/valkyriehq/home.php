@@ -13,7 +13,7 @@
     <picture class="opacity-25 w-100">
       <source media="(max-width: 767.98px)" srcset="<?php echo get_template_directory_uri(); ?>/img/placeholder-small.svg">
       <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/img/placeholder.svg">
-      <img class="w-100" src="<?php echo get_template_directory_uri(); ?>/img/placeholder.svg" alt="Placeholder">
+      <img class="w-100" src="<?php echo get_template_directory_uri(); ?>/img/placeholder.svg" height="768px" width="1366px" alt="Placeholder">
     </picture>
   </div>
 </main>
