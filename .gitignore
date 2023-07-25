@@ -1,4 +1,5 @@
 node_modules
+wp-content/themes/valkyriehq/static/
 
 *~
 .DS_Store

@@ -1,0 +1,7 @@
+.btn {
+  &-primary {
+    &:not(:hover) {
+      color: white;
+    }
+  }
+}
