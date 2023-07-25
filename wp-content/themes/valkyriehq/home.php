@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 
 <main id="main">
-  <h1>Home</h1>
   <?php the_content(); ?>
   <div class="align-items-end component__hero-home d-flex justify-content-center position-relative">
     <div class="container my-5 position-absolute pb-md-3 pb-lg-5">
