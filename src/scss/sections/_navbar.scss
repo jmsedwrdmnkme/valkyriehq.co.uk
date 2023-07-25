@@ -1,3 +1,28 @@
+.navbar-expand-lg {
+  @include media-breakpoint-down(lg) {
+    display: flex;
+    left: 0;
+    justify-content: flex-end;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .navbar-collapse {
+    @extend .mt-4;
+    @extend .mt-lg-0;
+    @extend .p-4;
+    @extend .p-lg-0;
+
+    &.collapsing,
+    &.show {
+      background-color: rgba(black, 90%);
+    }
+  }
+}
+
 .navbar-nav {
   .nav-link {
     font-family: $headings-font-family;

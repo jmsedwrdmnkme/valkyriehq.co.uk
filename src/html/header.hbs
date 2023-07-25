@@ -10,11 +10,11 @@
 <a class="visually-hidden-focusable" href="#main">Skip to main content</a>
 
 <header class="align-items-center container-fluid d-flex justify-content-between position-fixed py-3 top-0 z-2">
-  <a href="/">
+  <a href="<?php echo get_site_url(); ?>">
     <img src="<?php echo get_template_directory_uri(); ?>/img/logo-valkyrie-hq.png" class="img-fluid" height="50" width="171" alt="Valkyrie HQ logo">
   </a>
-  <nav class="navbar navbar-expand-lg">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+  <nav class="navbar navbar-expand-lg py-4 py-lg-0">
+    <button class="navbar-toggler me-4" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="main-menu">
@@ -31,7 +31,7 @@
       ?>
     </div>
   </nav>
-  <div>
-    <a href="/book-a-session" class="btn btn-primary">Book a session</a>
+  <div class="d-none d-lg-block">
+    <a href="<?php echo get_site_url(); ?>/book-a-session" class="btn btn-primary">Book a session</a>
   </div>
 </header>
