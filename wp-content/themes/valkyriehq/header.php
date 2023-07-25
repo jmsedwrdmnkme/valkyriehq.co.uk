@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html data-bs-theme="dark" <?php language_attributes(); ?>>
 <head>
   <meta charset="<?php bloginfo( 'charset' ); ?>" />
   <meta name="viewport" content="width=device-width" />
@@ -11,7 +11,7 @@
 
 <header class="align-items-center container-fluid d-flex justify-content-between position-fixed py-3 top-0 z-2">
   <a href="/">
-    <img src="img/logo-valkyrie-hq.png" class="img-fluid" alt="Valkyrie HQ logo">
+    <img src="<?php echo get_template_directory_uri(); ?>img/logo-valkyrie-hq.png" class="img-fluid" height="50" width="171" alt="Valkyrie HQ logo">
   </a>
   <nav class="navbar navbar-expand-lg">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">

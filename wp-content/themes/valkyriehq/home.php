@@ -12,9 +12,9 @@
       </div>
     </div>
     <picture class="w-100">
-      <source media="(max-width: 767.98px)" srcset="img/placeholder-small.svg">
-      <source media="(min-width: 768px)" srcset="img/placeholder.svg">
-      <img class="w-100" src="img/placeholder.svg" alt="Placeholder">
+      <source media="(max-width: 767.98px)" srcset="<?php echo get_template_directory_uri(); ?>img/placeholder-small.svg">
+      <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>img/placeholder.svg">
+      <img class="w-100" src="<?php echo get_template_directory_uri(); ?>img/placeholder.svg" alt="Placeholder">
     </picture>
   </div>
 </main>
