@@ -24,7 +24,8 @@ export function fonts() {
     .pipe(gulp.dest('wp-content/themes/valkyriehq/static/fonts/'))
     .pipe(browsersync.stream());
   return gulp.src('src/fonts/*')
-    .pipe(gulp.dest('wp-content/themes/valkyriehq/fonts/'));
+    .pipe(gulp.dest('wp-content/themes/valkyriehq/fonts/'))
+    .pipe(browsersync.stream());
 }
 
 export function scripts() {
@@ -38,7 +39,8 @@ export function scripts() {
     .pipe(webpack({}, compiler, function(err, stats) {}))
     .pipe(uglify())
     .pipe(concat('script.js'))
-    .pipe(gulp.dest('wp-content/themes/valkyriehq/'));
+    .pipe(gulp.dest('wp-content/themes/valkyriehq/'))
+    .pipe(browsersync.stream());
 }
 
 export function styles() {
@@ -50,7 +52,8 @@ export function styles() {
   return gulp.src('src/scss/style.scss')
     .pipe(sass({outputStyle: 'compressed'}))
     .pipe(cleanCSS())
-    .pipe(gulp.dest('wp-content/themes/valkyriehq/'));
+    .pipe(gulp.dest('wp-content/themes/valkyriehq/'))
+    .pipe(browsersync.stream());
 }
 
 export function sprite() {
@@ -70,7 +73,8 @@ export function sprite() {
       svg: { xmlDeclaration: false, doctypeDeclaration: false, namespaceIDs: false, namespaceClassnames: false }
     }))
     .pipe(concat('sprite.hbs'))
-    .pipe(gulp.dest('src/html/partials/global/'));
+    .pipe(gulp.dest('src/html/partials/global/'))
+    .pipe(browsersync.stream());
 }
 
 export function images() {
@@ -121,6 +125,7 @@ export function images() {
       })
     ]))
     .pipe(gulp.dest('wp-content/themes/valkyriehq/img/'))
+    .pipe(browsersync.stream());
 }
 
 export function html() {
@@ -132,7 +137,8 @@ export function html() {
   return gulp.src('src/html/*.hbs')
     .pipe(hb().partials('src/html/partials/**/*.hbs'))
     .pipe(ext('.php'))
-    .pipe(gulp.dest('wp-content/themes/valkyriehq/'));
+    .pipe(gulp.dest('wp-content/themes/valkyriehq/'))
+    .pipe(browsersync.stream());
 }
 
 export function browserSync(done) {

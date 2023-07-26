@@ -1,0 +1,61 @@
+@import "../../../node_modules/@glidejs/glide/src/assets/sass/glide.core";
+
+.glide {
+  &__arrows {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+  }
+
+  &__arrow {
+    background: none;
+    border: none;
+    pointer-events: all;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 0.75;
+    }
+
+    &--left {
+      @include media-breakpoint-down(md) {
+        margin-left: -1.25rem;
+      }
+
+      @include media-breakpoint-up(md) {
+        margin-left: -3.5rem;
+      }
+    }
+
+    &--right {
+      @include media-breakpoint-down(md) {
+        margin-right: -1.25rem;
+      }
+
+      @include media-breakpoint-up(md) {
+        margin-right: -3.5rem;
+      }
+    }
+
+    &::before {
+      content: attr(data-glide-dir);
+      color: $primary;
+      font-family: $headings-font-family;
+      line-height: 0.4;
+      font-weight: bolder;
+
+      @include media-breakpoint-down(md) {
+        font-size: 125px;
+      }
+
+      @include media-breakpoint-up(md) {
+        font-size: 200px;
+      }
+    }
+  }
+}

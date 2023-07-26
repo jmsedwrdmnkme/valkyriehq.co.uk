@@ -1,0 +1,28 @@
+.blockquote {
+  font-family: $headings-font-family;
+  text-transform: uppercase;
+
+  p {
+    &::before,
+    &::after {
+      color: $primary;
+      font-size: 3rem;
+      line-height: 0;
+      position: relative;
+      top: 1.25rem;
+    }
+
+    &::before {
+      content: '“';
+    }
+
+    &::after {
+      content: '”';
+    }
+  }
+
+  figcaption {
+    margin-top: 1rem;
+    text-align: right;
+  }
+}
