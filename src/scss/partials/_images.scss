@@ -1,0 +1,11 @@
+img {
+  a & {
+    transition: all 0.2s;
+
+    &:hover {
+      opacity: 0.75;
+      transform: scale(1.05);
+      transform-origin: center;
+    }
+  }
+}
