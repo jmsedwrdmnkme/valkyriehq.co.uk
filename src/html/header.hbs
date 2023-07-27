@@ -11,7 +11,7 @@
 
 <a class="visually-hidden-focusable" href="#main">Skip to main content</a>
 
-<header class="align-items-center container-fluid d-flex justify-content-between position-fixed py-3 top-0 z-2">
+<header class="align-items-center container-fluid d-flex justify-content-between position-fixed py-3 top-0 z-2 bg-black bg-opacity-50">
   <a href="<?php echo get_site_url(); ?>">
     <img src="<?php echo get_template_directory_uri(); ?>/img/logo-valkyrie-hq.png" class="img-fluid" height="50" width="171" alt="Valkyrie HQ logo">
   </a>
