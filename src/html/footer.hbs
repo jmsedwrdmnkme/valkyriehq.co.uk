@@ -2,7 +2,7 @@
   <div class="container mb-5">
     <div class="row text-center">
       <div class="col-md text-md-start">
-        <a href="/">
+        <a href="<?php echo get_site_url(); ?>">
           <img src="<?php echo get_template_directory_uri(); ?>/img/logo-valkyrie-hq.png" class="img-fluid" alt="Valkyrie HQ logo" width="171" height="50">
         </a>
         <small class="d-block mt-4 pt-2 col-xl-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</small>
