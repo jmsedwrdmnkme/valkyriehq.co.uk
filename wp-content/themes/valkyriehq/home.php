@@ -84,7 +84,7 @@
             <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/placeholder.svg" alt="" class="img-fluid w-100" width="735px" height="413px">
           </a>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6 d-none d-md-block">
           <div class="row">
             <div class="col-md-6 mt-4">
               <a href="#" class="d-block position-relative text-white">
