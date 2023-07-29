@@ -14,6 +14,7 @@
   }
 
   $image_id = get_field('image');
+    $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', TRUE);
     $image_desktop = wp_get_attachment_image_src($image_id, 'hero-home-desktop');
     $image_mobile = wp_get_attachment_image_src($image_id, 'hero-home-mobile');
 ?>
@@ -32,6 +33,6 @@
   <picture class="opacity-25 w-100">
     <source media="(max-width: 767.98px)" srcset="<?php echo $image_mobile[0]; ?>">
     <source media="(min-width: 768px)" srcset="<?php echo $image_desktop[0]; ?>">
-    <img class="img-fluid w-100" src="<?php echo $image_desktop[0]; ?>" height="768px" width="1366px" alt="Placeholder">
+    <img class="img-fluid w-100" src="<?php echo $image_desktop[0]; ?>" height="768px" width="1366px" alt="<?php echo $image_alt; ?>">
   </picture>
 </div>
