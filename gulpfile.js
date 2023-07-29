@@ -155,21 +155,30 @@ export function components() {
   const componentsList = getFolders('src/html/blocks/');
 
   return componentsList.map(function (component) {
+    const componentsSrc = 'src/html/blocks/' + component;
+    const componentsSrcNot = '!src/html/blocks/' + component;
     const componentsDest = 'wp-content/themes/valkyriehq/blocks/' + component;
 
     return gulp.series(
       function componentsCss () {
-        return gulp.src('src/html/blocks/' + component + '/style.scss', { allowEmpty: true })
+        return gulp.src(componentsSrc + '/style.scss', { allowEmpty: true })
           .pipe(sass({outputStyle: 'compressed'}))
           .pipe(cleanCSS())
           .pipe(gulp.dest(componentsDest))
           .pipe(browsersync.stream());
       },
 
+      function componentsHtml () {
+        return gulp.src(componentsSrc + '/index.hbs', { allowEmpty: true })
+          .pipe(ext('.html'))
+          .pipe(gulp.dest(componentsDest))
+          .pipe(browsersync.stream());
+      },
+
       function componentsCopy (done) {
         return gulp
-          .src(['src/html/blocks/' + component + '/*', '!src/html/blocks/' + component + '/*.scss'])
-          .pipe(gulp.dest('wp-content/themes/valkyriehq/blocks/' + component))
+          .src([componentsSrc + '/*', componentsSrcNot + '/*.hbs', componentsSrcNot + '/*.scss'])
+          .pipe(gulp.dest(componentsDest))
           .pipe(browsersync.stream());
       },
 
