@@ -20,7 +20,7 @@ import path from 'path';
 import browsersync from 'browser-sync';
 
 export const clean = () => del([ 'wp-content/themes/valkyriehq/' ]);
-export const cleanComponents = () => del([ 'wp-content/themes/valkyriehq/blocks/' ]);
+export const cleanComponents = () => del([ 'wp-content/themes/valkyriehq/template-parts/' ]);
 
 export function fonts() {
   gulp.src('src/fonts/*')
@@ -152,12 +152,12 @@ export function getFolders(dir) {
 }
 
 export function components() {
-  const componentsList = getFolders('src/html/blocks/');
+  const componentsList = getFolders('src/html/template-parts/blocks/');
 
   return componentsList.map(function (component) {
-    const componentsSrc = 'src/html/blocks/' + component;
-    const componentsSrcNot = '!src/html/blocks/' + component;
-    const componentsDest = 'wp-content/themes/valkyriehq/blocks/' + component;
+    const componentsSrc = 'src/html/template-parts/blocks/' + component;
+    const componentsSrcNot = '!src/html/template-parts/blocks/' + component;
+    const componentsDest = 'wp-content/themes/valkyriehq/template-parts/blocks/' + component;
 
     return gulp.series(
       function componentsCss () {
@@ -202,10 +202,10 @@ export function browserSyncReload(done) {
 function watchFiles() {
   gulp.watch('src/js/**/*.js', scripts);
   gulp.watch('src/sprite/**/*.svg', sprite);
-  gulp.watch(['src/html/**/*.hbs', '!src/html/blocks/**/*.hbs'], html);
+  gulp.watch(['src/html/**/*.hbs', '!src/html/template-parts/blocks/**/*.hbs'], html);
   gulp.watch('src/scss/**/*.scss', styles);
   gulp.watch('src/img/**/*', images);
-  gulp.watch('src/html/blocks/**/*', componentsWatch);
+  gulp.watch('src/html/template-parts/blocks/**/*', componentsWatch);
 }
 
 const componentsWatch = gulp.series(cleanComponents, gulp.parallel.apply(gulp.parallel, components()));
