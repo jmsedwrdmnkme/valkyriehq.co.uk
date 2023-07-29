@@ -15,9 +15,12 @@ import svgsprite from 'gulp-svg-sprite';
 import imagemin, {gifsicle, mozjpeg, optipng, svgo} from 'gulp-imagemin';
 import hb from 'gulp-hb';
 import ext from 'gulp-ext-replace'
+import fs from 'fs';
+import path from 'path';
 import browsersync from 'browser-sync';
 
 export const clean = () => del([ 'wp-content/themes/valkyriehq/' ]);
+export const cleanComponents = () => del([ 'wp-content/themes/valkyriehq/blocks/' ]);
 
 export function fonts() {
   gulp.src('src/fonts/*')
@@ -141,6 +144,42 @@ export function html() {
     .pipe(browsersync.stream());
 }
 
+export function getFolders(dir) {
+  return fs.readdirSync(dir)
+    .filter(function(file) {
+      return fs.statSync(path.join(dir, file)).isDirectory();
+    });
+}
+
+export function components() {
+  const componentsList = getFolders('src/html/blocks/');
+
+  return componentsList.map(function (component) {
+    const componentsDest = 'wp-content/themes/valkyriehq/blocks/' + component;
+
+    return gulp.series(
+      function componentsCss () {
+        return gulp.src('src/html/blocks/' + component + '/style.scss', { allowEmpty: true })
+          .pipe(sass({outputStyle: 'compressed'}))
+          .pipe(cleanCSS())
+          .pipe(gulp.dest(componentsDest))
+          .pipe(browsersync.stream());
+      },
+
+      function componentsCopy (done) {
+        return gulp
+          .src(['src/html/blocks/' + component + '/*', '!src/html/blocks/' + component + '/*.scss'])
+          .pipe(gulp.dest('wp-content/themes/valkyriehq/blocks/' + component))
+          .pipe(browsersync.stream());
+      },
+
+      function componentsDone (done) {
+        done();
+      }
+    );
+  });
+}
+
 export function browserSync(done) {
   browsersync.init({server: {baseDir: "wp-content/themes/valkyriehq/static/"}, port: 3000});
   done();
@@ -154,12 +193,14 @@ export function browserSyncReload(done) {
 function watchFiles() {
   gulp.watch('src/js/**/*.js', scripts);
   gulp.watch('src/sprite/**/*.svg', sprite);
-  gulp.watch('src/html/**/*.hbs', html);
+  gulp.watch(['src/html/**/*.hbs', '!src/html/blocks/**/*.hbs'], html);
   gulp.watch('src/scss/**/*.scss', styles);
   gulp.watch('src/img/**/*', images);
+  gulp.watch('src/html/blocks/**/*', componentsWatch);
 }
 
-export const build = gulp.series(clean, gulp.parallel(fonts, sprite, images, scripts, styles), html);
+const componentsWatch = gulp.series(cleanComponents, gulp.parallel.apply(gulp.parallel, components()));
+export const build = gulp.series(clean, gulp.parallel(fonts, sprite, images, scripts, styles), html, componentsWatch);
 const watch = gulp.series(build, browserSync, watchFiles);
 
 export default watch;
