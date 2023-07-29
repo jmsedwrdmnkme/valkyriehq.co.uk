@@ -121,3 +121,80 @@ function valkyriehq_title( $title ) {
     return $title;
   }
 }
+
+add_action('acf/init', 'my_acf_init_block_types');
+function my_acf_init_block_types() {
+  if( function_exists('acf_register_block_type') ) {
+
+    acf_register_block_type(array(
+      'name'              => 'hero-home',
+      'title'             => __('Hero Home'),
+      'description'       => __('Hero Home block.'),
+      'render_template'   => 'blocks/hero-home/index.php',
+      'category'          => 'formatting',
+      'icon'              => 'admin-comments',
+      'keywords'          => array( 'hero', 'home' ),
+    ));
+
+    acf_register_block_type(array(
+      'name'              => 'sessions',
+      'title'             => __('Sessions'),
+      'description'       => __('Sessions block.'),
+      'render_template'   => 'blocks/sessions/index.php',
+      'category'          => 'formatting',
+      'icon'              => 'admin-comments',
+      'keywords'          => array( 'sessions' ),
+    ));
+
+    acf_register_block_type(array(
+      'name'              => 'blog-posts',
+      'title'             => __('Blog Posts'),
+      'description'       => __('Blog Posts block.'),
+      'render_template'   => 'blocks/blog-posts/index.php',
+      'category'          => 'formatting',
+      'icon'              => 'admin-comments',
+      'keywords'          => array( 'blog', 'posts' ),
+    ));
+
+    acf_register_block_type(array(
+      'name'              => 'about',
+      'title'             => __('About'),
+      'description'       => __('About block.'),
+      'render_template'   => 'blocks/about/index.php',
+      'category'          => 'formatting',
+      'icon'              => 'admin-comments',
+      'keywords'          => array( 'about' ),
+    ));
+
+    acf_register_block_type(array(
+      'name'              => 'testimonials-carousel',
+      'title'             => __('Testimonials Carousel'),
+      'description'       => __('Testimonials Carousel block.'),
+      'render_template'   => 'blocks/testimonials-carousel/index.php',
+      'category'          => 'formatting',
+      'icon'              => 'admin-comments',
+      'keywords'          => array( 'testimonials', 'carousel' ),
+    ));
+
+    acf_register_block_type(array(
+      'name'              => 'book-now',
+      'title'             => __('Book Now'),
+      'description'       => __('Book Now block.'),
+      'render_template'   => 'blocks/book-now/index.php',
+      'category'          => 'formatting',
+      'icon'              => 'admin-comments',
+      'keywords'          => array( 'book' ),
+    ));
+
+    acf_register_block_type(array(
+      'name'              => 'instagram-feed',
+      'title'             => __('Instagram Feed'),
+      'description'       => __('Instagram Feed block.'),
+      'render_template'   => 'blocks/instagram-feed/index.php',
+      'category'          => 'formatting',
+      'icon'              => 'admin-comments',
+      'keywords'          => array( 'instagram2, 'feed' ),
+    ));
+
+  }
+}
