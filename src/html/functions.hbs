@@ -9,6 +9,10 @@ function valkyriehq_setup() {
   add_theme_support( 'post-thumbnails' );
   add_theme_support( 'html5', array( 'search-form' ) );
 
+  // Image sizes
+  add_image_size( 'hero-home-desktop', 1366, 768, array( 'center', 'center' ) );
+  add_image_size( 'hero-home-mobile', 640, 880, array( 'center', 'center' ) );
+
   // CSS in editor
   add_theme_support( 'editor-styles' );
   add_editor_style( 'style.css' );

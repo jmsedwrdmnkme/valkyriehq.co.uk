@@ -14,6 +14,15 @@
 <header class="align-items-center container-fluid d-flex justify-content-between position-fixed py-3 top-0 z-2 bg-black bg-opacity-50">
   <a href="<?php echo get_site_url(); ?>">
     <img src="<?php echo get_template_directory_uri(); ?>/img/logo-valkyrie-hq.png" class="img-fluid" height="50" width="171" alt="Valkyrie HQ logo">
+    <h1 class="visually-hidden">
+      <?php
+        if ( is_front_page() || is_home() || is_front_page() && is_home() ) {
+          echo esc_html(get_bloginfo('name'));
+        } else {
+          echo esc_html(get_the_title());
+        }
+      ?>
+    </h1>
   </a>
   <nav class="navbar navbar-expand-lg py-4 py-lg-0">
     <button class="navbar-toggler me-4" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">

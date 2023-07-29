@@ -1,20 +1,31 @@
 <?php
-/**
- * Hero Home Block Template.
- */
+  /**
+   * Hero Home Block Template.
+   */
 
+  $title = get_field('title');
+  $text = get_field('text');
+  $button_text = get_field('button_text');
+  $button_link = get_field('button_link');
+  $image_id = get_field('image');
+    $image_desktop = wp_get_attachment_image_src($image_id, 'hero-home-desktop');
+    $image_mobile = wp_get_attachment_image_src($image_id, 'hero-home-mobile');
 ?>
 <div class="hero__home align-items-end component__hero-home d-flex justify-content-center position-relative">
   <div class="container my-5 position-absolute pb-md-3 pb-lg-5 z-1">
     <div class="col-lg-8 col-xl-6">
-      <div class="h1 display-1">Lorem ipsum sit dolor amet</div>
-      <p class="lead mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <a href="#" class="btn btn-primary mt-2">Book a session</a>
+      <div class="h1 display-1"><?php echo $title; ?></div>
+      <?php if ($text) : ?>
+        <p class="lead mt-3"><?php echo $text; ?></p>
+      <?php endif; ?>
+      <?php if ($button_text) : ?>
+        <a href="<?php echo $button_link; ?>" class="btn btn-primary mt-2"><?php echo $button_text; ?></a>
+      <?php endif; ?>
     </div>
   </div>
   <picture class="opacity-25 w-100">
-    <source media="(max-width: 767.98px)" srcset="img/placeholder-small.svg">
-    <source media="(min-width: 768px)" srcset="img/placeholder.svg">
-    <img class="img-fluid w-100" src="img/placeholder.svg" height="768px" width="1366px" alt="Placeholder">
+    <source media="(max-width: 767.98px)" srcset="<?php echo $image_mobile[0]; ?>">
+    <source media="(min-width: 768px)" srcset="<?php echo $image_desktop[0]; ?>">
+    <img class="img-fluid w-100" src="<?php echo $image_desktop[0]; ?>" height="768px" width="1366px" alt="Placeholder">
   </picture>
 </div>
