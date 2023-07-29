@@ -5,8 +5,14 @@
 
   $title = get_field('title');
   $text = get_field('text');
-  $button_text = get_field('button_text');
+
   $button_link = get_field('button_link');
+  if ($button_link) {
+    $link_url = $button_link['url'];
+    $link_title = $button_link['title'];
+    $link_target = $button_link['target'] ? $button_link['target'] : '_self';
+  }
+
   $image_id = get_field('image');
     $image_desktop = wp_get_attachment_image_src($image_id, 'hero-home-desktop');
     $image_mobile = wp_get_attachment_image_src($image_id, 'hero-home-mobile');
@@ -18,8 +24,8 @@
       <?php if ($text) : ?>
         <p class="lead mt-3"><?php echo $text; ?></p>
       <?php endif; ?>
-      <?php if ($button_text) : ?>
-        <a href="<?php echo $button_link; ?>" class="btn btn-primary mt-2"><?php echo $button_text; ?></a>
+      <?php if ($button_link) : ?>
+        <a href="<?php echo esc_url($link_url); ?>"  target="<?php echo esc_attr( $link_target ); ?>" class="btn btn-primary mt-2"><?php echo esc_html( $link_title ); ?></a>
       <?php endif; ?>
     </div>
   </div>
