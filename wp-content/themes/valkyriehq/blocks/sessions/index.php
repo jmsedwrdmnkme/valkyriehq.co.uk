@@ -1,0 +1,38 @@
+<?php
+  /**
+   * Sessions Block Template.
+   */
+
+  $title = get_field('title');
+  $text = get_field('text');
+
+  $button_link = get_field('button_link');
+  if ($button_link) {
+    $link_url = $button_link['url'];
+    $link_title = $button_link['title'];
+    $link_target = $button_link['target'] ? $button_link['target'] : '_self';
+  }
+
+  $image_id = get_field('image');
+    $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', TRUE);
+    $image_desktop = wp_get_attachment_image_src($image_id, 'hero-home-desktop');
+    $image_mobile = wp_get_attachment_image_src($image_id, 'hero-home-mobile');
+?>
+<div class="hero__home align-items-end component__hero-home d-flex justify-content-center position-relative">
+  <div class="container my-5 position-absolute pb-md-3 pb-lg-5 z-1">
+    <div class="col-lg-8 col-xl-6">
+      <div class="h1 display-1"><?php echo $title; ?></div>
+      <?php if ($text) : ?>
+        <p class="lead mt-3"><?php echo $text; ?></p>
+      <?php endif; ?>
+      <?php if ($button_link) : ?>
+        <a href="<?php echo esc_url($link_url); ?>"  target="<?php echo esc_attr( $link_target ); ?>" class="btn btn-primary mt-2"><?php echo esc_html( $link_title ); ?></a>
+      <?php endif; ?>
+    </div>
+  </div>
+  <picture class="opacity-25 w-100">
+    <source media="(max-width: 767.98px)" srcset="<?php echo $image_mobile[0]; ?>">
+    <source media="(min-width: 768px)" srcset="<?php echo $image_desktop[0]; ?>">
+    <img class="img-fluid w-100" src="<?php echo $image_desktop[0]; ?>" height="768px" width="1366px" alt="<?php echo $image_alt; ?>">
+  </picture>
+</div>
