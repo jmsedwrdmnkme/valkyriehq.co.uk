@@ -1,11 +1,11 @@
 {
-  "name": "acf/blog",
-  "title": "Blog",
-  "description": "Blog block.",
+  "name": "acf/instagram",
+  "title": "Instagram",
+  "description": "Instagram block.",
   "style": [ "file:./style.css" ],
   "category": "formatting",
   "icon": "admin-comments",
-  "keywords": ["blog", "news"],
+  "keywords": ["instagram", "social"],
   "acf": {
     "mode": "preview",
     "renderTemplate": "index.php"

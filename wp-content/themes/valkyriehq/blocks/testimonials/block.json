@@ -1,11 +1,11 @@
 {
-  "name": "acf/blog",
-  "title": "Blog",
-  "description": "Blog block.",
+  "name": "acf/testimonials",
+  "title": "Testimonials",
+  "description": "Testimonials block.",
   "style": [ "file:./style.css" ],
   "category": "formatting",
   "icon": "admin-comments",
-  "keywords": ["blog", "news"],
+  "keywords": ["testimonials"],
   "acf": {
     "mode": "preview",
     "renderTemplate": "index.php"

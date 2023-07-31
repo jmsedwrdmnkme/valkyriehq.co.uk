@@ -132,4 +132,7 @@ function register_acf_blocks() {
   register_block_type( __DIR__ . '/blocks/sessions' );
   register_block_type( __DIR__ . '/blocks/blog' );
   register_block_type( __DIR__ . '/blocks/about' );
+  register_block_type( __DIR__ . '/blocks/testimonials' );
+  register_block_type( __DIR__ . '/blocks/get-started' );
+  register_block_type( __DIR__ . '/blocks/instagram' );
 }

@@ -1,11 +1,11 @@
 {
-  "name": "acf/blog",
-  "title": "Blog",
-  "description": "Blog block.",
+  "name": "acf/get-started",
+  "title": "Get started",
+  "description": "Get started block.",
   "style": [ "file:./style.css" ],
   "category": "formatting",
   "icon": "admin-comments",
-  "keywords": ["blog", "news"],
+  "keywords": ["started", "book"],
   "acf": {
     "mode": "preview",
     "renderTemplate": "index.php"

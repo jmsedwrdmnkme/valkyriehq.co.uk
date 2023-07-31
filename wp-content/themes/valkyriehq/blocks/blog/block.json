@@ -5,7 +5,7 @@
   "style": [ "file:./style.css" ],
   "category": "formatting",
   "icon": "admin-comments",
-  "keywords": ["blog", "new"],
+  "keywords": ["blog", "news"],
   "acf": {
     "mode": "preview",
     "renderTemplate": "index.php"

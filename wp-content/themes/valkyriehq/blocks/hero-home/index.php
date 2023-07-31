@@ -16,7 +16,7 @@
   }
 
   $image_id = $post->ID;
-    $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', TRUE);
+    $image_alt = get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', TRUE);
     $image_desktop = get_the_post_thumbnail_url($image_id, 'hero-home-desktop');
     $image_mobile = get_the_post_thumbnail_url($image_id, 'hero-home-mobile');
 ?>
@@ -33,8 +33,8 @@
     </div>
   </div>
   <picture class="opacity-25 w-100">
-    <source media="(max-width: 767.98px)" srcset="<?php echo $image_mobile[0]; ?>">
-    <source media="(min-width: 768px)" srcset="<?php echo $image_desktop[0]; ?>">
-    <img class="img-fluid w-100" src="<?php echo $image_desktop[0]; ?>" height="768px" width="1366px" alt="<?php echo $image_alt; ?>">
+    <source media="(max-width: 767.98px)" srcset="<?php echo $image_mobile; ?>">
+    <source media="(min-width: 768px)" srcset="<?php echo $image_desktop; ?>">
+    <img class="img-fluid w-100" src="<?php echo $image_desktop; ?>" height="768px" width="1366px" alt="<?php echo $image_alt; ?>">
   </picture>
 </div>

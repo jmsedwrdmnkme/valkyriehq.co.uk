@@ -1,6 +1,6 @@
 <?php
   /**
-   * Hero Home Block Template.
+   * Instagram Block Template.
    */
 
   global $post;

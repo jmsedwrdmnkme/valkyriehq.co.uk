@@ -1,6 +1,6 @@
 <?php
   /**
-   * Hero Home Block Template.
+   * Get Started Block Template.
    */
 
   global $post;
