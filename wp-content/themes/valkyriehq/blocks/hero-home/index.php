@@ -3,6 +3,8 @@
    * Hero Home Block Template.
    */
 
+  global $post;
+
   $title = get_field('title');
   $text = get_field('text');
 
@@ -13,10 +15,10 @@
     $link_target = $button_link['target'] ? $button_link['target'] : '_self';
   }
 
-  $image_id = get_field('image');
+  $image_id = $post->ID;
     $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', TRUE);
-    $image_desktop = wp_get_attachment_image_src($image_id, 'hero-home-desktop');
-    $image_mobile = wp_get_attachment_image_src($image_id, 'hero-home-mobile');
+    $image_desktop = get_the_post_thumbnail_url($image_id, 'hero-home-desktop');
+    $image_mobile = get_the_post_thumbnail_url($image_id, 'hero-home-mobile');
 ?>
 <div class="hero__home align-items-end component__hero-home d-flex justify-content-center position-relative">
   <div class="container my-5 position-absolute pb-md-3 pb-lg-5 z-1">
