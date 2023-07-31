@@ -129,4 +129,7 @@ function valkyriehq_title( $title ) {
 add_action( 'init', 'register_acf_blocks', 5 );
 function register_acf_blocks() {
   register_block_type( __DIR__ . '/blocks/hero-home' );
+  register_block_type( __DIR__ . '/blocks/sessions' );
+  register_block_type( __DIR__ . '/blocks/blog' );
+  register_block_type( __DIR__ . '/blocks/about' );
 }
