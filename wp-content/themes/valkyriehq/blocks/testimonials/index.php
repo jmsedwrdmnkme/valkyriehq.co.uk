@@ -2,39 +2,48 @@
   /**
    * Testimonials Block Template.
    */
-
-  global $post;
-
-  $title = get_field('title');
-  $text = get_field('text');
-
-  $button_link = get_field('button_link');
-  if ($button_link) {
-    $link_url = $button_link['url'];
-    $link_title = $button_link['title'];
-    $link_target = $button_link['target'] ? $button_link['target'] : '_self';
-  }
-
-  $image_id = $post->ID;
-    $image_alt = get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', TRUE);
-    $image_desktop = get_the_post_thumbnail_url($image_id, 'hero-home-desktop');
-    $image_mobile = get_the_post_thumbnail_url($image_id, 'hero-home-mobile');
 ?>
-<div class="hero__home align-items-end component__hero-home d-flex justify-content-center position-relative">
-  <div class="container my-5 position-absolute pb-md-3 pb-lg-5 z-1">
-    <div class="col-lg-8 col-xl-6">
-      <div class="h1 display-1"><?php echo $title; ?></div>
-      <?php if ($text) : ?>
-        <p class="lead mt-3"><?php echo $text; ?></p>
-      <?php endif; ?>
-      <?php if ($button_link) : ?>
-        <a href="<?php echo esc_url($link_url); ?>"  target="<?php echo esc_attr( $link_target ); ?>" class="btn btn-primary mt-2"><?php echo esc_html( $link_title ); ?></a>
-      <?php endif; ?>
+<div class="component__testimonials py-5 overflow-hidden">
+  <div class="container text-center">
+    <h2 class="display-5">Client testimonials</h2>
+  </div>
+  <div class="container mt-5 pb-3">
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+        <div class="glide">
+          <div class="glide__track mx-5 overflow-visible" data-glide-el="track">
+            <ul class="glide__slides">
+              <li class="glide__slide">
+                <div class="row bg-secondary py-3 px-1 py-md-4 px-md-3 align-items-center">
+                  <div class="col-lg-6">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/placeholder.svg" loading="lazy" class="img-fluid w-100" alt="">
+                  </div>
+                  <figure class="col-lg-6 mb-0 mt-3 mt-lg-0">
+                    <blockquote class="blockquote mb-0">
+                      <p>Duis aute irurwe dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+                      <figcaption class="blockquote-footer">
+                        John Smith
+                      </figcaption>
+                    </blockquote>
+                  </figure>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+              <span class="visually-hidden">
+                prev
+              </span>
+            </button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+              <span class="visually-hidden">
+                next
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  <picture class="opacity-25 w-100">
-    <source media="(max-width: 767.98px)" srcset="<?php echo $image_mobile; ?>">
-    <source media="(min-width: 768px)" srcset="<?php echo $image_desktop; ?>">
-    <img class="img-fluid w-100" src="<?php echo $image_desktop; ?>" height="768px" width="1366px" alt="<?php echo $image_alt; ?>">
-  </picture>
 </div>

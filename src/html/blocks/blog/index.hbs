@@ -2,37 +2,66 @@
   /**
    * Blog Template.
    */
-
-  $title = get_field('title');
-  $text = get_field('text');
-
-  $button_link = get_field('button_link');
-  if ($button_link) {
-    $link_url = $button_link['url'];
-    $link_title = $button_link['title'];
-    $link_target = $button_link['target'] ? $button_link['target'] : '_self';
-  }
-
-  $image_id = get_field('image');
-    $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', TRUE);
-    $image_desktop = wp_get_attachment_image_src($image_id, 'hero-home-desktop');
-    $image_mobile = wp_get_attachment_image_src($image_id, 'hero-home-mobile');
 ?>
-<div class="hero__home align-items-end component__hero-home d-flex justify-content-center position-relative">
-  <div class="container my-5 position-absolute pb-md-3 pb-lg-5 z-1">
-    <div class="col-lg-8 col-xl-6">
-      <div class="h1 display-1"><?php echo $title; ?></div>
-      <?php if ($text) : ?>
-        <p class="lead mt-3"><?php echo $text; ?></p>
-      <?php endif; ?>
-      <?php if ($button_link) : ?>
-        <a href="<?php echo esc_url($link_url); ?>"  target="<?php echo esc_attr( $link_target ); ?>" class="btn btn-primary mt-2"><?php echo esc_html( $link_title ); ?></a>
-      <?php endif; ?>
+<div class="bg-secondary component__blog-posts py-5">
+  <div class="container">
+    <div class="row align-items-center justify-content-between">
+      <h2 class="col-auto display-5">Blog</h2>
+      <div class="col-auto">
+        <a href="#" class="btn btn-outline-light">View all posts</a>
+      </div>
     </div>
   </div>
-  <picture class="opacity-25 w-100">
-    <source media="(max-width: 767.98px)" srcset="<?php echo $image_mobile[0]; ?>">
-    <source media="(min-width: 768px)" srcset="<?php echo $image_desktop[0]; ?>">
-    <img class="img-fluid w-100" src="<?php echo $image_desktop[0]; ?>" height="768px" width="1366px" alt="<?php echo $image_alt; ?>">
-  </picture>
+  <div class="container-fluid mt-1 pb-3">
+    <div class="row">
+      <div class="col-lg-6 mt-4">
+        <a href="#" class="d-block position-relative text-white">
+          <div class="bottom-0 left-0 m-3 position-absolute z-1 pe-none">
+            <h3 class="bg-black d-inline-block px-1">Blog title</h3>
+            <div>
+              <small class="bg-black col-lg-10 d-inline px-1">Posted by <span class="text-primary">James</span> on <span class="text-primary">1st August 2023</span></small>
+            </div>
+            <small class="bg-black col-lg-10 d-inline-block mt-3 px-1">Lorem ipsum sit dolor amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</small>
+          </div>
+          <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/placeholder.svg" alt="" class="img-fluid w-100" width="735px" height="413px">
+        </a>
+      </div>
+      <div class="col-lg-6 d-none d-md-block">
+        <div class="row">
+          <div class="col-md-6 mt-4">
+            <a href="#" class="d-block position-relative text-white">
+              <div class="bottom-0 left-0 m-3 position-absolute z-1 pe-none">
+                <h3 class="bg-black d-inline-block mb-0 px-1">Blog title</h3>
+              </div>
+              <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/placeholder.svg" alt="" class="img-fluid w-100" width="735px" height="413px">
+            </a>
+          </div>
+          <div class="col-md-6 mt-4">
+            <a href="#" class="d-block position-relative text-white">
+              <div class="bottom-0 left-0 m-3 position-absolute z-1 pe-none">
+                <h3 class="bg-black d-inline-block mb-0 px-1">Blog title</h3>
+              </div>
+              <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/placeholder.svg" alt="" class="img-fluid w-100" width="735px" height="413px">
+            </a>
+          </div>
+          <div class="col-md-6 mt-4">
+            <a href="#" class="d-block position-relative text-white">
+              <div class="bottom-0 left-0 m-3 position-absolute z-1 pe-none">
+                <h3 class="bg-black d-inline-block mb-0 px-1">Blog title</h3>
+              </div>
+              <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/placeholder.svg" alt="" class="img-fluid w-100" width="735px" height="413px">
+            </a>
+          </div>
+          <div class="col-md-6 mt-4">
+            <a href="#" class="d-block position-relative text-white">
+              <div class="bottom-0 left-0 m-3 position-absolute z-1 pe-none">
+                <h3 class="bg-black d-inline-block mb-0 px-1">Blog title</h3>
+              </div>
+              <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/placeholder.svg" alt="" class="img-fluid w-100" width="735px" height="413px">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

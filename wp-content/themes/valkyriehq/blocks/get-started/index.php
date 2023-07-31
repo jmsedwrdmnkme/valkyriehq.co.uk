@@ -2,39 +2,19 @@
   /**
    * Get Started Block Template.
    */
-
-  global $post;
-
-  $title = get_field('title');
-  $text = get_field('text');
-
-  $button_link = get_field('button_link');
-  if ($button_link) {
-    $link_url = $button_link['url'];
-    $link_title = $button_link['title'];
-    $link_target = $button_link['target'] ? $button_link['target'] : '_self';
-  }
-
-  $image_id = $post->ID;
-    $image_alt = get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', TRUE);
-    $image_desktop = get_the_post_thumbnail_url($image_id, 'hero-home-desktop');
-    $image_mobile = get_the_post_thumbnail_url($image_id, 'hero-home-mobile');
 ?>
-<div class="hero__home align-items-end component__hero-home d-flex justify-content-center position-relative">
-  <div class="container my-5 position-absolute pb-md-3 pb-lg-5 z-1">
-    <div class="col-lg-8 col-xl-6">
-      <div class="h1 display-1"><?php echo $title; ?></div>
-      <?php if ($text) : ?>
-        <p class="lead mt-3"><?php echo $text; ?></p>
-      <?php endif; ?>
-      <?php if ($button_link) : ?>
-        <a href="<?php echo esc_url($link_url); ?>"  target="<?php echo esc_attr( $link_target ); ?>" class="btn btn-primary mt-2"><?php echo esc_html( $link_title ); ?></a>
-      <?php endif; ?>
+<div class="component__book py-4 bg-primary">
+  <div class="container">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-lg-5 col-xl-4 text-center text-lg-start pb-1">
+        <h2 class="display-5">Get started training with us</h2>
+        <a href="#" class="btn btn-outline-light mt-3">Any questions?</a>
+        <a href="#" class="btn btn-dark mt-3 ms-3">Book a session</a>
+      </div>
+      <div class="col-lg-6 col-xl-7 mt-4 lead mt-lg-3">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
     </div>
   </div>
-  <picture class="opacity-25 w-100">
-    <source media="(max-width: 767.98px)" srcset="<?php echo $image_mobile; ?>">
-    <source media="(min-width: 768px)" srcset="<?php echo $image_desktop; ?>">
-    <img class="img-fluid w-100" src="<?php echo $image_desktop; ?>" height="768px" width="1366px" alt="<?php echo $image_alt; ?>">
-  </picture>
 </div>
