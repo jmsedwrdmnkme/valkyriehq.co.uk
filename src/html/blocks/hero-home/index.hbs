@@ -32,7 +32,7 @@
       <?php endif; ?>
     </div>
   </div>
-  <picture class="opacity-25 w-100">
+  <picture class="opacity-50 w-100">
     <source media="(max-width: 767.98px)" srcset="<?php echo $image_mobile; ?>">
     <source media="(min-width: 768px)" srcset="<?php echo $image_desktop; ?>">
     <img class="img-fluid w-100" src="<?php echo $image_desktop; ?>" height="768" width="1366" alt="<?php echo $image_alt; ?>">
