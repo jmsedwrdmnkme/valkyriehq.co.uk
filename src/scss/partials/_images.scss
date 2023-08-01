@@ -13,4 +13,8 @@ img {
     @extend .img-fluid;
     @extend .w-100;
   }
+
+  &.grayscale {
+    filter: grayscale(100%);
+  }
 }

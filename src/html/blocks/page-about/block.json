@@ -1,0 +1,14 @@
+{
+  "name": "acf/page-about",
+  "title": "About Page",
+  "description": "About Page block.",
+  "style": [ "file:./style.css" ],
+  "category": "formatting",
+  "icon": "admin-comments",
+  "keywords": ["about"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "index.php"
+  },
+  "align": "full"
+}
