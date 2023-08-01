@@ -1,5 +1,13 @@
 main {
-  > *:not([class*=component]) {
-    @extend .container;
+  > * {
+    &:first-child {
+      &:not([class*=hero]) {
+        margin-top: calc(3rem + 3vw);
+      }
+    }
+
+    &:not([class*=component]) {
+      @extend .container;
+    }
   }
 }
