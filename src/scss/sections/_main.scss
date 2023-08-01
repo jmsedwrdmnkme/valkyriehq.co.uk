@@ -8,6 +8,10 @@ main {
 
     &:not([class*=component]) {
       @extend .container;
+
+      &:last-child {
+        @extend .mb-5;
+      }
     }
   }
 }
