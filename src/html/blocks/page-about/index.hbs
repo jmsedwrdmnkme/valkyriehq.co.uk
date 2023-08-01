@@ -3,9 +3,6 @@
    * About Page Block Template.
    */
 
-  global $post;
-
-  $photos = have_rows('photos');
   $tagline = get_field('tagline');
   $text = get_field('text');
 
@@ -16,11 +13,11 @@
     $link_target = $button_link['target'] ? $button_link['target'] : '_self';
   }
 ?>
-<div class="component__page--about pb-5 mt-n4">
+<div class="component__page--about pb-5 mt-n5">
   <div class="container-fluid">
     <div class="row justify-content-center">
-      <?php if($photos) :
-        while($photos) : the_row();
+      <?php if(have_rows('photos')) :
+        while(have_rows('photos')) : the_row();
           $image_id = get_sub_field('sub_field');
           $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', TRUE);
           $image_src = get_the_post_thumbnail_url($image_id, 'column-16x9');
@@ -32,11 +29,11 @@
       <?php endif; ?>
     </div>
   </div>
-  <div class="container text-center mt-4 pb-3">
-    <div class="h3"><?php echo $tagline; ?></div>
+  <div class="container mt-4 pb-3">
+    <div class="h3 text-center py-2"><?php echo $tagline; ?></div>
     <?php if ($text) : ?>
-      <div class="border-2 border-primary border-top lead mt-4 pt-3">
-        <div class="columns">
+      <div class="border-2 border-primary border-top mt-4 pt-4">
+        <div class="columns pt-2">
           <?php echo $text; ?>
           <?php if ($button_link) : ?>
             <div class="text-center">
