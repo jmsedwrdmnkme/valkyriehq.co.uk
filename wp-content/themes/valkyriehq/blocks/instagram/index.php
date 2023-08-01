@@ -2,11 +2,13 @@
   /**
    * Instagram Block Template.
    */
+
+  $title = get_field('title');
 ?>
 <div class="component__instagram py-5">
   <div class="container">
     <div class="row">
-      <div class="col-12 text-center h2 display-5">Get social <a href="//instagram.com/valkyriehq" target="_blank">@valkyriehq</a></div>
+      <div class="col-12 text-center h2 display-5"><?php echo $title; ?> <a href="//instagram.com/valkyriehq" target="_blank">@valkyriehq</a></div>
       <div class="col-12 mt-4">
         <div class="bg-secondary py-5">
           <div class="p-5 m-4 text-center">
