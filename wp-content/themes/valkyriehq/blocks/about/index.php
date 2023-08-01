@@ -31,9 +31,9 @@
           <div class="col-md-6 col-lg-4 mt-4">
             <a href="<?php echo esc_url($page_link); ?>" class="d-block position-relative text-white">
               <div class="top-50 start-50 position-absolute translate-middle z-1 pe-none">
-                <h2 class="h3 bg-black d-inline-block px-1"><?php echo esc_url($page_title); ?></h2>
+                <h2 class="h3 bg-black d-inline-block px-1"><?php echo $page_title; ?></h2>
               </div>
-              <img loading="lazy" src="<?php echo $page_image_src; ?>" alt="<?php echo $page_image_alt; ?>" class="img-fluid w-100" width="960px" height="540px">
+              <img loading="lazy" src="<?php echo $page_image_src; ?>" alt="<?php echo $page_image_alt; ?>" class="img-fluid w-100" width="735" height="415">
             </a>
           </div>
         <?php endforeach; ?>
