@@ -11,7 +11,7 @@
       <div class="col-md my-5">
         <?php the_content(); ?>
       </div>
-      <aside class="col-md-3 col-lg-2 my-5">
+      <aside class="col-lg-4 col-xl-3 mb-5 my-lg-5">
         <div class="bg-secondary p-5">
           ASIDE
         </div>
