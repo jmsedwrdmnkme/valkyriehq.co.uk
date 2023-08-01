@@ -30,7 +30,7 @@
     </div>
   </div>
   <div class="container pb-3">
-    <div class="h3 text-center pt-4 pb-2"><?php echo $tagline; ?></div>
+    <div class="h3 h4 text-center pt-4"><?php echo $tagline; ?></div>
     <?php if ($text) : ?>
       <div class="border-2 border-primary border-top mt-4 pt-4">
         <div class="columns pt-2">
