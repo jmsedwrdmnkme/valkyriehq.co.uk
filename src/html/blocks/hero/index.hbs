@@ -19,9 +19,9 @@
     $image_desktop = get_the_post_thumbnail_url($image_id, 'hero-home-desktop');
     $image_mobile = get_the_post_thumbnail_url($image_id, 'hero-home-mobile');
 ?>
-<div class="component__hero align-items-center d-flex justify-content-center position-relative overflow-hidden">
-  <div class="container my-5 py-md-5 position-relative z-1 text-center">
-    <div class="h1 display-3"><?php the_title(); ?></div>
+<div class="component__hero align-items-center d-flex justify-content-center position-relative overflow-hidden py-5">
+  <div class="container my-5 py-5 position-relative z-1 text-center">
+    <div class="h1 display-3 mt-5"><?php the_title(); ?></div>
     <?php if ($text) : ?>
       <p class="lead mt-3"><?php echo $text; ?></p>
     <?php endif; ?>
@@ -29,7 +29,7 @@
       <a href="<?php echo esc_url($link_url); ?>"  target="<?php echo esc_attr($link_target); ?>" class="btn btn-outline-primary mt-2"><?php echo esc_html($link_title); ?></a>
     <?php endif; ?>
   </div>
-  <picture class="opacity-50 w-100 position-absolute top-50 start-0 translate-middle-y">
+  <picture class="component__hero--image opacity-50 position-absolute top-50 start-50 translate-middle">
     <source media="(max-width: 767.98px)" srcset="<?php echo $image_mobile; ?>">
     <source media="(min-width: 768px)" srcset="<?php echo $image_desktop; ?>">
     <img class="img-fluid w-100" src="<?php echo $image_desktop; ?>" height="768" width="1366" alt="<?php echo $image_alt; ?>">
