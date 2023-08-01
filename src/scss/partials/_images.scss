@@ -8,4 +8,9 @@ img {
       transform-origin: center;
     }
   }
+
+  &.wp-image-100 {
+    @extent .img-fluid;
+    @extent .w-100;
+  }
 }

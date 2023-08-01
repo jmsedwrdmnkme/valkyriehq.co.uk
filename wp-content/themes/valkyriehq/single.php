@@ -8,7 +8,7 @@
   </div>
   <div class="container">
     <div class="row">
-      <div class="col-md my-5">
+      <div class="col-lg-8 my-5">
         <?php the_content(); ?>
       </div>
       <aside class="col-lg-4 col-xl-3 mb-5 my-lg-5">
