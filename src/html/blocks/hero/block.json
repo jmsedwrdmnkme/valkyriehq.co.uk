@@ -1,0 +1,14 @@
+{
+  "name": "acf/hero",
+  "title": "Hero",
+  "description": "Hero block.",
+  "style": [ "file:./style.css" ],
+  "category": "formatting",
+  "icon": "admin-comments",
+  "keywords": ["hero"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "index.php"
+  },
+  "align": "full"
+}

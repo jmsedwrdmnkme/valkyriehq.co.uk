@@ -1,6 +1,6 @@
 <?php
   /**
-   * Hero Home Block Template.
+   * Hero Block Template.
    */
 
   global $post;
@@ -20,7 +20,7 @@
     $image_desktop = get_the_post_thumbnail_url($image_id, 'hero-home-desktop');
     $image_mobile = get_the_post_thumbnail_url($image_id, 'hero-home-mobile');
 ?>
-<div class="align-items-end component__hero-home d-flex justify-content-center position-relative">
+<div class="component__hero align-items-end d-flex justify-content-center position-relative">
   <div class="container my-5 position-absolute pb-md-3 pb-lg-5 z-1">
     <div class="col-lg-8 col-xl-6">
       <div class="h1 display-1"><?php echo $title; ?></div>
