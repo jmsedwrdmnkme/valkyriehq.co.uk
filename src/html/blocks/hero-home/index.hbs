@@ -28,7 +28,7 @@
         <p class="lead mt-3"><?php echo $text; ?></p>
       <?php endif; ?>
       <?php if ($button_link) : ?>
-        <a href="<?php echo esc_url($link_url); ?>"  target="<?php echo esc_attr( $link_target ); ?>" class="btn btn-primary mt-2"><?php echo esc_html( $link_title ); ?></a>
+        <a href="<?php echo esc_url($link_url); ?>"  target="<?php echo esc_attr($link_target); ?>" class="btn btn-primary mt-2"><?php echo esc_html($link_title); ?></a>
       <?php endif; ?>
     </div>
   </div>

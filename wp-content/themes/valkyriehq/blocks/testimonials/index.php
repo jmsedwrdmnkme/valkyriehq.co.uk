@@ -31,12 +31,12 @@
             </ul>
           </div>
           <div class="glide__arrows" data-glide-el="controls">
-            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="&lt;">
               <span class="visually-hidden">
                 prev
               </span>
             </button>
-            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+            <button class="glide__arrow glide__arrow--right" data-glide-dir="&gt;">
               <span class="visually-hidden">
                 next
               </span>

@@ -13,6 +13,9 @@ function valkyriehq_setup() {
   add_image_size( 'hero-home-desktop', 1366, 768, array( 'center', 'center' ) );
   add_image_size( 'hero-home-mobile', 640, 880, array( 'center', 'center' ) );
 
+  add_image_size( 'column-blog-16x9', 960, 540, array( 'center', 'center' ) );
+  add_image_size( 'column-16x9', 735, 415, array( 'center', 'center' ) );
+
   // CSS in editor
   add_theme_support( 'editor-styles' );
   add_editor_style( 'style.css' );
