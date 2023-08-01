@@ -13,24 +13,24 @@
     $link_target = $button_link['target'] ? $button_link['target'] : '_self';
   }
 ?>
-<div class="component__page--about pb-5 mt-n5">
-  <div class="container-fluid">
+<div class="component__page--about pb-5">
+  <div class="container-fluid mt-n5 d-none d-lg-block">
     <div class="row justify-content-center">
       <?php if(have_rows('photos')) :
         while(have_rows('photos')) : the_row();
-          $image_id = get_sub_field('sub_field');
+          $image_id = get_sub_field('image');
           $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', TRUE);
-          $image_src = get_the_post_thumbnail_url($image_id, 'column-16x9');
+          $image_src = wp_get_attachment_image_src($image_id, 'column-16x9')[0];
       ?>
           <div class="col-md-6 col-lg-4 mt-4">
-            <img loading="lazy" src="<?php echo $page_image_src; ?>" alt="<?php echo $page_image_alt; ?>" class="img-fluid w-100 grayscale" width="735" height="415">
+            <img loading="lazy" src="<?php echo $image_src; ?>" alt="<?php echo $image_alt; ?>" class="img-fluid w-100 grayscale" width="735" height="415">
           </div>
         <?php endwhile; ?>
       <?php endif; ?>
     </div>
   </div>
-  <div class="container mt-4 pb-3">
-    <div class="h3 text-center py-2"><?php echo $tagline; ?></div>
+  <div class="container pb-3">
+    <div class="h3 text-center pt-4 pb-2"><?php echo $tagline; ?></div>
     <?php if ($text) : ?>
       <div class="border-2 border-primary border-top mt-4 pt-4">
         <div class="columns pt-2">
