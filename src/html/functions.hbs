@@ -138,4 +138,5 @@ function register_acf_blocks() {
   register_block_type( __DIR__ . '/blocks/get-started' );
   register_block_type( __DIR__ . '/blocks/instagram' );
   register_block_type( __DIR__ . '/blocks/hero' );
+  register_block_type( __DIR__ . '/blocks/page-about' );
 }
