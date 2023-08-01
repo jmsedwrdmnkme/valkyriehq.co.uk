@@ -10,7 +10,7 @@ img {
   }
 
   &.wp-image-100 {
-    @extent .img-fluid;
-    @extent .w-100;
+    @extend .img-fluid;
+    @extend .w-100;
   }
 }
