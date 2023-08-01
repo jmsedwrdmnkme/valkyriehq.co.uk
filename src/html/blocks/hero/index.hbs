@@ -29,9 +29,9 @@
       <a href="<?php echo esc_url($link_url); ?>"  target="<?php echo esc_attr($link_target); ?>" class="btn btn-outline-primary mt-2"><?php echo esc_html($link_title); ?></a>
     <?php endif; ?>
   </div>
-  <picture class="component__hero--image opacity-50 position-absolute top-50 start-50 translate-middle">
+  <picture>
     <source media="(max-width: 767.98px)" srcset="<?php echo $image_mobile; ?>">
     <source media="(min-width: 768px)" srcset="<?php echo $image_desktop; ?>">
-    <img class="img-fluid w-100" src="<?php echo $image_desktop; ?>" height="768" width="1366" alt="<?php echo $image_alt; ?>">
+    <img class="component__hero--image opacity-50 position-absolute top-50 start-50 translate-middle" src="<?php echo $image_desktop; ?>" height="768" width="1366" alt="<?php echo $image_alt; ?>">
   </picture>
 </div>
