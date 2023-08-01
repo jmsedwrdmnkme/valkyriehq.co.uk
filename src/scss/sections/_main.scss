@@ -1,0 +1,5 @@
+main {
+  > *:not([class*=component]) {
+    @extend .container;
+  }
+}
