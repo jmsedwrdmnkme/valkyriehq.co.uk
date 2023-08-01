@@ -1,0 +1,14 @@
+{
+  "name": "acf/coaches",
+  "title": "Coaches",
+  "description": "Coaches block.",
+  "style": [ "file:./style.css" ],
+  "category": "formatting",
+  "icon": "admin-comments",
+  "keywords": ["coaches"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "index.php"
+  },
+  "align": "full"
+}

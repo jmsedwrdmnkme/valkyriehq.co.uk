@@ -133,7 +133,7 @@ function watchFiles() {
   gulp.watch(['src/html/**/*.hbs', '!src/html/blocks/**/*.hbs'], html);
   gulp.watch('src/scss/**/*.scss', styles);
   gulp.watch('src/img/**/*', images);
-  gulp.watch('src/html/blocks/**/*', componentsWatch);
+  gulp.watch('src/html/blocks/**/**/**/*', componentsWatch);
 }
 
 const componentsWatch = gulp.series(cleanComponents, gulp.parallel.apply(gulp.parallel, components()));
