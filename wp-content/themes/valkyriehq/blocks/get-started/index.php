@@ -14,7 +14,7 @@
         <a href="<?php echo get_site_url(); ?>/contact-us/" class="btn btn-outline-light mt-3">Any questions?</a>
         <a href="<?php echo get_site_url(); ?>/book-a-session/" class="btn btn-dark mt-3 ms-3">Book a session</a>
       </div>
-      <div class="col-lg-6 col-xl-7 mt-4 lead mt-lg-3">
+      <div class="col-lg-6 col-xl-7 mt-4 lead mt-lg-0">
         <?php echo $text; ?>
       </div>
     </div>
