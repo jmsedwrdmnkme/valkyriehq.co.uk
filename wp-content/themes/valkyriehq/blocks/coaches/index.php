@@ -30,7 +30,7 @@
       ?>
           <div class="col-md-6 col-lg-3 mt-4">
             <a href="<?php the_permalink(); ?>" class="d-block position-relative text-white">
-              <div class="bottom-0 start-00 position-absolute z-1 m-3">
+              <div class="bottom-0 start-00 position-absolute z-1 m-3 pe-none">
                 <h3 class="bg-black d-inline-block px-1 text-center mb-0"><?php the_title(); ?></h3>
               </div>
               <img loading="lazy" src="<?php echo $image_src; ?>" alt="<?php echo $image_alt; ?>" class="img-fluid w-100" width="735" height="415">
