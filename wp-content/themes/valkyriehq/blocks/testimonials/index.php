@@ -2,6 +2,8 @@
   /**
    * Testimonials Block Template.
    */
+
+  $title = get_field('title');
 ?>
 <div class="component__testimonials py-5 overflow-hidden">
   <div class="container text-center">
@@ -13,21 +15,36 @@
         <div class="glide">
           <div class="glide__track mx-5 overflow-visible" data-glide-el="track">
             <ul class="glide__slides">
-              <li class="glide__slide">
-                <div class="row bg-secondary py-3 px-1 py-md-4 px-md-3 align-items-center">
-                  <div class="col-lg-6">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/placeholder.svg" loading="lazy" class="img-fluid w-100" alt="">
+              <?php
+                $args = array(
+                  'post_type' => 'testimonial'
+                );
+                $the_query = new WP_Query($args);
+                while ($the_query -> have_posts()) : 
+                  $the_query -> the_post();	  
+                  $image_id = get_the_ID();
+                  $image_alt = get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', TRUE);
+                  $image_src = get_the_post_thumbnail_url($image_id, 'column-16x9');
+              ?>
+                <li class="glide__slide">
+                  <div class="row bg-secondary py-3 px-1 py-md-4 px-md-3 align-items-center">
+                    <div class="col-lg-6">
+                      <img loading="lazy" src="<?php echo $image_src; ?>" alt="<?php echo $image_alt; ?>" class="img-fluid w-100" width="735" height="415">
+                    </div>
+                    <figure class="col-lg-6 mb-0 mt-3 mt-lg-0">
+                      <blockquote class="blockquote mb-0">
+                        <p><?php the_field('quote', get_the_ID()) ?></p>
+                        <figcaption class="blockquote-footer">
+                          <?php the_title(); ?>
+                        </figcaption>
+                      </blockquote>
+                    </figure>
                   </div>
-                  <figure class="col-lg-6 mb-0 mt-3 mt-lg-0">
-                    <blockquote class="blockquote mb-0">
-                      <p>Duis aute irurwe dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
-                      <figcaption class="blockquote-footer">
-                        John Smith
-                      </figcaption>
-                    </blockquote>
-                  </figure>
-                </div>
-              </li>
+                </li>
+              <?php
+                endwhile;
+                wp_reset_postdata();
+              ?>
             </ul>
           </div>
           <div class="glide__arrows" data-glide-el="controls">
