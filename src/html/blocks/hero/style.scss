@@ -22,9 +22,9 @@
 
 .component__hero {
   &--image {
-    min-width: 100%;
-    min-height: 100%;
     height: auto;
     width: auto;
+    min-height: 100%;
+    min-width: 100%;
   }
 }
