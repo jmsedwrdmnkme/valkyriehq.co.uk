@@ -30,8 +30,8 @@
             <h2 class="display-5"><?php the_title(); ?></h2>
           </a>
           <p class="lead"><?php the_field('tagline', get_the_ID()) ?></p>
-          <a href="btn btn-outline-primary mt-4">Find out more</a>
-          <a href="btn btn-primary mt-4">Book a session</a>
+          <a href="<?php the_permalink(); ?>" class="btn btn-outline-primary mt-4">Find out more</a>
+          <a href="<?php echo get_site_url(); ?>/book-a-session/" class="btn btn-primary mt-4">Book a session</a>
         </div>
       </div>
     </div>
