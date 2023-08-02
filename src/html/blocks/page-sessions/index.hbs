@@ -26,12 +26,14 @@
           <img loading="lazy" src="<?php echo $image_src; ?>" alt="<?php echo $image_alt; ?>" class="img-fluid w-100" width="735" height="415">
         </div>
         <div class="content col-lg mt-4">
-          <a href="<?php the_permalink(); ?>">
-            <h2 class="display-5"><?php the_title(); ?></h2>
-          </a>
-          <p class="lead"><?php the_field('tagline', get_the_ID()) ?></p>
-          <a href="<?php the_permalink(); ?>" class="btn btn-outline-primary mt-2">Find out more</a>
-          <a href="<?php echo get_site_url(); ?>/book-a-session/" class="btn btn-primary mt-2 ms-2">Book a session</a>
+          <div class="content--container">
+            <a href="<?php the_permalink(); ?>">
+              <h2 class="display-5"><?php the_title(); ?></h2>
+            </a>
+            <p class="lead"><?php the_field('tagline', get_the_ID()) ?></p>
+            <a href="<?php the_permalink(); ?>" class="btn btn-outline-primary mt-2">Find out more</a>
+            <a href="<?php echo get_site_url(); ?>/book-a-session/" class="btn btn-primary mt-2 ms-2">Book a session</a>
+          </div>
         </div>
       </div>
     </div>

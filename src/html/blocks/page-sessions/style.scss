@@ -23,6 +23,11 @@
 .component__page--sessions {
   &-row {
     @include media-breakpoint-up(lg) {
+      .content--container {
+        max-width: calc(calc(var(--bs-breakpoint-lg) / 2) - 2rem);
+        margin-left: auto;
+      }
+
       &:nth-child(even) {
         background-color: $secondary;
 
