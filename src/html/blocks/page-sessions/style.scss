@@ -22,7 +22,7 @@
 
 .component__page--sessions {
   &-row {
-    &:nth(even) {
+    &:nth-child(even) {
       background-color: $secondary;
 
       .photo {
