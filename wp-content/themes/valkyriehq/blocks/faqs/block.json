@@ -1,0 +1,14 @@
+{
+  "name": "acf/faqs",
+  "title": "FAQs",
+  "description": "FAQs block.",
+  "style": [ "file:./style.css" ],
+  "category": "formatting",
+  "icon": "admin-comments",
+  "keywords": ["faqs"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "index.php"
+  },
+  "align": "full"
+}

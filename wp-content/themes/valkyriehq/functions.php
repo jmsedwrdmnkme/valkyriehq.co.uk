@@ -131,6 +131,8 @@ function valkyriehq_title( $title ) {
 add_action( 'init', 'register_acf_blocks', 5 );
 function register_acf_blocks() {
   register_block_type( __DIR__ . '/blocks/hero-home' );
+  register_block_type( __DIR__ . '/blocks/hero' );
+
   register_block_type( __DIR__ . '/blocks/sessions' );
   register_block_type( __DIR__ . '/blocks/blog' );
   register_block_type( __DIR__ . '/blocks/about' );
@@ -138,7 +140,8 @@ function register_acf_blocks() {
   register_block_type( __DIR__ . '/blocks/testimonials' );
   register_block_type( __DIR__ . '/blocks/get-started' );
   register_block_type( __DIR__ . '/blocks/instagram' );
-  register_block_type( __DIR__ . '/blocks/hero' );
+  register_block_type( __DIR__ . '/blocks/faqs' );
+
   register_block_type( __DIR__ . '/blocks/page-about' );
   register_block_type( __DIR__ . '/blocks/page-sessions' );
 }
