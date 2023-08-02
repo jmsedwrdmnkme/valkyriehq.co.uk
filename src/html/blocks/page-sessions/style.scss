@@ -25,7 +25,12 @@
     @include media-breakpoint-up(lg) {
       .content--container {
         max-width: calc(calc(var(--bs-breakpoint-lg) / 2) - 2rem);
-        margin-left: auto;
+      }
+
+      &:nth-child(odd) {
+        .content--container {
+          margin-right: auto;
+        }
       }
 
       &:nth-child(even) {
@@ -37,6 +42,10 @@
 
         .content {
           order: 0;
+        }
+
+        .content--container {
+          margin-left: auto;
         }
       }
     }
