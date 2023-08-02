@@ -18,11 +18,11 @@
             $answer = get_sub_field('answer');
           ?>
             <div class="accordion-item">
-              <h2 class="accordion-header">
+              <h3 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-<?php echo $counter; ?>" aria-expanded="false" aria-controls="flush-collapse-<?php echo $counter; ?>">
                   <?php echo $question; ?>
                 </button>
-              </h2>
+              </h3>
               <div id="flush-collapse-<?php echo $counter; ?>" class="accordion-collapse collapse" data-bs-parent="#accordionFaqs">
                 <div class="accordion-body">
                   <?php echo $answer; ?>
