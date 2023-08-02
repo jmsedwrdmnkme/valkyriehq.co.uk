@@ -50,7 +50,13 @@
     @each $size in $breakpoints {
       @include media-breakpoint-up(#{$size}) {
         .content--container {
-          max-width: calc(calc(var(--bs-breakpoint-#{$size}) / 2) - 2rem);
+          @if $size == lg {
+            max-width: calc(calc(var(--bs-breakpoint-#{$size}) / 2) - 2rem);
+          } @else if $size == xl {
+            max-width: calc(calc(var(--bs-breakpoint-#{$size}) / 2) - 3.75rem);
+          } @else if $size == xxl {
+            max-width: calc(calc(var(--bs-breakpoint-#{$size}) / 2) - 5rem);
+          }
         }
       }
     }
