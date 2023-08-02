@@ -1,0 +1,14 @@
+{
+  "name": "acf/page-sessions",
+  "title": "Sessions page",
+  "description": "Sessions page block.",
+  "style": [ "file:./style.css" ],
+  "category": "formatting",
+  "icon": "admin-comments",
+  "keywords": ["sessions"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "index.php"
+  },
+  "align": "full"
+}
