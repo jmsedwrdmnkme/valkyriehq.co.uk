@@ -23,10 +23,6 @@
 .component__page--sessions {
   &-row {
     @include media-breakpoint-up(lg) {
-      .content--container {
-        max-width: calc(calc(var(--bs-breakpoint-lg) / 2) - 2rem);
-      }
-
       &:nth-child(odd) {
         .content--container {
           margin-right: auto;
@@ -46,6 +42,15 @@
 
         .content--container {
           margin-left: auto;
+        }
+      }
+    }
+
+    $breakpoints: lg, xl, xxl;
+    @each $size in $breakpoints {
+      @include media-breakpoint-up(#{$size}) {
+        .content--container {
+          max-width: calc(calc(var(--bs-breakpoint-#{$size}) / 2) - 2rem);
         }
       }
     }
