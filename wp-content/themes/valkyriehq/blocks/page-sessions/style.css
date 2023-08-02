@@ -1,1 +1,1 @@
-.component__page--sessions-row:nth-child(even){background-color:#1d1d1b}.component__page--sessions-row:nth-child(even) .image{order:1}.component__page--sessions-row:nth-child(even) .content{order:0}
+@media(min-width:992px){.component__page--sessions-row:nth-child(even){background-color:#1d1d1b}.component__page--sessions-row:nth-child(even) .image{order:1}.component__page--sessions-row:nth-child(even) .content{order:0}}

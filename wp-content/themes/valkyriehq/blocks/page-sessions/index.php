@@ -19,7 +19,7 @@
       $image_alt = get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', TRUE);
       $image_src = get_the_post_thumbnail_url($image_id, 'column-16x9');
   ?>
-  <div class="component__page--sessions-row py-5">
+  <div class="component__page--sessions-row pt-4 pb-5">
     <div class="container-fluid">
       <div class="row align-items-center justify-content-center">
         <div class="image col-lg mt-4">
@@ -30,8 +30,8 @@
             <h2 class="display-5"><?php the_title(); ?></h2>
           </a>
           <p class="lead"><?php the_field('tagline', get_the_ID()) ?></p>
-          <a href="<?php the_permalink(); ?>" class="btn btn-outline-primary mt-4">Find out more</a>
-          <a href="<?php echo get_site_url(); ?>/book-a-session/" class="btn btn-primary mt-4">Book a session</a>
+          <a href="<?php the_permalink(); ?>" class="btn btn-outline-primary mt-2">Find out more</a>
+          <a href="<?php echo get_site_url(); ?>/book-a-session/" class="btn btn-primary mt-2 ms-2">Book a session</a>
         </div>
       </div>
     </div>

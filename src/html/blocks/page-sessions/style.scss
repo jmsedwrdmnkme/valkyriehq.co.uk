@@ -22,15 +22,17 @@
 
 .component__page--sessions {
   &-row {
-    &:nth-child(even) {
-      background-color: $secondary;
+    @include media-breakpoint-up(lg) {
+      &:nth-child(even) {
+        background-color: $secondary;
 
-      .image {
-        order: 1;
-      }
+        .image {
+          order: 1;
+        }
 
-      .content {
-        order: 0;
+        .content {
+          order: 0;
+        }
       }
     }
   }
