@@ -22,5 +22,16 @@
 
 .component__page--sessions {
   &-row {
+    &:nth(even) {
+      background-color: $secondary;
+
+      .photo {
+        order: 1;
+      }
+
+      .content {
+        order: 0;
+      }
+    }
   }
 }
