@@ -5,10 +5,21 @@
 
 input,
 textarea {
+  @extend .mt-3;
   @extend .form-control;
 }
 
+textarea {
+  min-height: 7rem;
+}
+
+.wpforms-submit-container {
+  @extend .mt-3;
+  text-align: center;
+}
+
 button {
+  @extend .mt-3;
   @extend .btn;
   @extend .btn-primary;
 }
