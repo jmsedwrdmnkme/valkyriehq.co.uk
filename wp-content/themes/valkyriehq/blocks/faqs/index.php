@@ -12,7 +12,7 @@
   ?>
     <div class="container mt-5 mb-3">
       <div class="row justify-content-center">
-        <div class="accordion accordion-flush col-lg-10 mt-3" id="accordionFaqs">
+        <div class="accordion accordion-flush col-lg-10" id="accordionFaqs">
           <?php while(have_rows('faqs')) : the_row();
             $question = get_sub_field('question');
             $answer = get_sub_field('answer');
