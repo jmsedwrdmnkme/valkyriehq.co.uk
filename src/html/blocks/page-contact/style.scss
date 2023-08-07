@@ -21,4 +21,26 @@
  */
 
 .component__page--contact {
+  &-row {
+    @include media-breakpoint-up(lg) {
+      .content--container {
+        margin-right: auto;
+      }
+    }
+
+    $breakpoints: lg, xl, xxl;
+    @each $size in $breakpoints {
+      @include media-breakpoint-up(#{$size}) {
+        .content--container {
+          @if $size == lg {
+            max-width: calc(calc(var(--bs-breakpoint-#{$size}) / 2) - 2rem);
+          } @else if $size == xl {
+            max-width: calc(calc(var(--bs-breakpoint-#{$size}) / 2) - 3.75rem);
+          } @else if $size == xxl {
+            max-width: calc(calc(var(--bs-breakpoint-#{$size}) / 2) - 5rem);
+          }
+        }
+      }
+    }
+  }
 }
