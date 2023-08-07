@@ -10,7 +10,7 @@
 <div class="component__page--contact bg-secondary">
   <div class="component__page--contact-row row align-items-center justify-content-center">
     <div class="content col-lg py-4">
-      <div class="content--container">
+      <div class="content--container mb-4">
         <div class="text-center">
           <?php echo $text; ?>
         </div>
