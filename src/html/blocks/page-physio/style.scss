@@ -1,0 +1,64 @@
+/*
+ * Theme specific overrides
+ */
+
+@import "../../../scss/variables/variables";
+
+/*
+ * Bootstrap
+ */
+
+// Configuration
+@import "../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../node_modules/bootstrap/scss/variables-dark";
+@import "../../../../node_modules/bootstrap/scss/maps";
+@import "../../../../node_modules/bootstrap/scss/mixins";
+@import "../../../../node_modules/bootstrap/scss/utilities";
+
+/*
+ * Block specific styles
+ */
+
+.component__page--physio {
+  &-row {
+    @include media-breakpoint-up(lg) {
+      &:nth-child(odd) {
+        .content--container {
+          margin-right: auto;
+        }
+      }
+
+      &:nth-child(even) {
+        background-color: $secondary;
+
+        .image {
+          order: 1;
+        }
+
+        .content {
+          order: 0;
+        }
+
+        .content--container {
+          margin-left: auto;
+        }
+      }
+    }
+
+    $breakpoints: lg, xl, xxl;
+    @each $size in $breakpoints {
+      @include media-breakpoint-up(#{$size}) {
+        .content--container {
+          @if $size == lg {
+            max-width: calc(calc(var(--bs-breakpoint-#{$size}) / 2) - 2rem);
+          } @else if $size == xl {
+            max-width: calc(calc(var(--bs-breakpoint-#{$size}) / 2) - 3.75rem);
+          } @else if $size == xxl {
+            max-width: calc(calc(var(--bs-breakpoint-#{$size}) / 2) - 5rem);
+          }
+        }
+      }
+    }
+  }
+}

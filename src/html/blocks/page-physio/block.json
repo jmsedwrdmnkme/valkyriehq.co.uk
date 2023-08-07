@@ -1,0 +1,14 @@
+{
+  "name": "acf/page-physio",
+  "title": "Physio page",
+  "description": "Physio page block.",
+  "style": [ "file:./style.css" ],
+  "category": "formatting",
+  "icon": "admin-comments",
+  "keywords": ["physio"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "index.php"
+  },
+  "align": "full"
+}

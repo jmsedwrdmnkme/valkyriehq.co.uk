@@ -144,4 +144,5 @@ function register_acf_blocks() {
 
   register_block_type( __DIR__ . '/blocks/page-about' );
   register_block_type( __DIR__ . '/blocks/page-sessions' );
+  register_block_type( __DIR__ . '/blocks/page-physio' );
 }
