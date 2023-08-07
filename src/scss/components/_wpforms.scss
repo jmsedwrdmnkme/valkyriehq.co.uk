@@ -1,0 +1,14 @@
+.wpforms-label-hide,
+.wpforms-hidden {
+  display: none;
+}
+
+input,
+textarea {
+  @extend .form-control;
+}
+
+button {
+  @extend .btn;
+  @extend .btn-primary;
+}
