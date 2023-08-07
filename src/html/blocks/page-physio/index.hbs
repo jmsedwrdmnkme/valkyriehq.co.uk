@@ -1,6 +1,6 @@
 <?php
   /**
-   * Sessions Page Block Template.
+   * Physio Page Block Template.
    */
 
   $title = get_field('title');
