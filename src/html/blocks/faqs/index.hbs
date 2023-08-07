@@ -19,7 +19,7 @@
           ?>
             <div class="accordion-item">
               <h3 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-<?php echo $counter; ?>" aria-expanded="false" aria-controls="flush-collapse-<?php echo $counter; ?>">
+                <button class="accordion-button collapsed text-uppercase fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-<?php echo $counter; ?>" aria-expanded="false" aria-controls="flush-collapse-<?php echo $counter; ?>">
                   <?php echo $question; ?>
                 </button>
               </h3>
