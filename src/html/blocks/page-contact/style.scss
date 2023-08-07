@@ -24,7 +24,7 @@
   &-row {
     @include media-breakpoint-up(lg) {
       .content--container {
-        margin-right: auto;
+        margin-left: auto;
       }
     }
 

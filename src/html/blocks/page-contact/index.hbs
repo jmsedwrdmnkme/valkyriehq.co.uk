@@ -5,6 +5,7 @@
 
   $title = get_field('title');
   $map_address = get_field('map_address');
+  $map_address = preg_replace('/\s+/', '+', $map_address);
 ?>
 <div class="component__page--contact">
   <div class="row align-items-center justify-content-center">
