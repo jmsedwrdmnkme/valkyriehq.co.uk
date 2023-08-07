@@ -25,9 +25,7 @@
             </div>
             <div class="content col-lg mt-4">
               <div class="content--container">
-                <a href="<?php the_permalink(); ?>">
-                  <h2 class="display-5"><?php echo $title; ?></h2>
-                </a>
+                <h2 class="display-5"><?php echo $title; ?></h2>
                 <div>
                   <?php echo $content; ?>
                 </div>
