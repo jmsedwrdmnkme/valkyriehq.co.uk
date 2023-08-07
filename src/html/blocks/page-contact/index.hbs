@@ -7,7 +7,7 @@
   $map_address = get_field('map_address');
   $map_address = preg_replace('/\s+/', '+', $map_address);
 ?>
-<div class="component__page--contact">
+<div class="component__page--contact bg-secondary">
   <div class="component__page--contact-row row align-items-center justify-content-center">
     <div class="content col-lg py-4">
       <div class="content--container">
