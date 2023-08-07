@@ -1,0 +1,14 @@
+{
+  "name": "acf/page-contact",
+  "title": "Contact page",
+  "description": "Contact page block.",
+  "style": [ "file:./style.css" ],
+  "category": "formatting",
+  "icon": "admin-comments",
+  "keywords": ["contact"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "index.php"
+  },
+  "align": "full"
+}
