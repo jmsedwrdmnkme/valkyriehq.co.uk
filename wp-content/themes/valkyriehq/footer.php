@@ -57,7 +57,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body ratio ratio-16x9">
-        <iframe src="https://www.wodboard.com/locations/312/timetable/204aa77fc4?adi=1" loading="lazy"></iframe>
+        <iframe src="https://www.wodboard.com/locations/312/timetable/204aa77fc4?adi=1" class="h-100 w-100" loading="lazy"></iframe>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
