@@ -42,7 +42,7 @@
       ?>
     </div>
   </nav>
-  <div class="me-5 mt-1 pe-5 me-lg-0 mt-0 pe-lg-0">
+  <div class="me-4 mt-2 pe-5 me-lg-0 mt-md-1 mt-lg-0 pe-lg-0">
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">Book a session</button>
   </div>
 </header>
