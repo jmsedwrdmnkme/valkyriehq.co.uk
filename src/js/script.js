@@ -1,5 +1,5 @@
 // Bootstrap
-import { collapse } from 'bootstrap'
+import { modal } from 'bootstrap'
 
 // Glide carousel
 import Glide, { Controls, Breakpoints } from '@glidejs/glide/dist/glide.modular.esm.js'
