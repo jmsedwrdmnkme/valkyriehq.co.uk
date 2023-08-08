@@ -42,7 +42,7 @@
       ?>
     </div>
   </nav>
-  <div class="d-none d-lg-block">
+  <div class="me-5 pe-5 me-lg-0 pe-lg-0">
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">Book a session</button>
   </div>
 </header>
