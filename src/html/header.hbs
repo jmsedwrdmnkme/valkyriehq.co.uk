@@ -43,6 +43,6 @@
     </div>
   </nav>
   <div class="d-none d-lg-block">
-    <a href="<?php echo get_site_url(); ?>/book-a-session" class="btn btn-primary">Book a session</a>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">Book a session</button>
   </div>
 </header>
