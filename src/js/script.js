@@ -27,3 +27,11 @@ sliders.forEach((slider) => {
     }
   }).mount({ Controls, Breakpoints })
 });
+
+// Booking modal
+const bookingModal = document.getElementById('bookingModal')
+bookingModal.addEventListener('shown.bs.modal', event => {
+  let modalIframe = bookingModal.querySelector('iframe');
+  let modalIframeDataSrc = modalIframe.getAttribute('data-src');
+  modalIframe.src = modalIframeDataSrc;
+})
