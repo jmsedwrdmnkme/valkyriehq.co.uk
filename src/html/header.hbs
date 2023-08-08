@@ -25,7 +25,7 @@
     </h1>
   </a>
   <nav class="navbar navbar-expand-lg py-4 py-lg-0">
-    <button class="navbar-toggler me-4" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler me-4 position-relative z-1" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="main-menu">
@@ -42,7 +42,7 @@
       ?>
     </div>
   </nav>
-  <div class="me-4 mt-2 pe-5 me-lg-0 mt-md-1 mt-lg-0 pe-lg-0">
+  <div class="me-4 mt-2 pe-5 me-lg-0 mt-md-1 mt-lg-0 pe-lg-0 position-relative">
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">Book a session</button>
   </div>
 </header>
