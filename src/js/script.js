@@ -33,5 +33,9 @@ const bookingModal = document.getElementById('bookingModal')
 bookingModal.addEventListener('shown.bs.modal', event => {
   let modalIframe = bookingModal.querySelector('iframe');
   let modalIframeDataSrc = modalIframe.getAttribute('data-src');
-  modalIframe.src = modalIframeDataSrc;
+
+  if (modalIframeDataSrc) {
+    modalIframe.src = modalIframeDataSrc;
+    modalIframe.removeAttribute('data-src');
+  }
 })
