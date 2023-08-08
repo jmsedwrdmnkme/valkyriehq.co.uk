@@ -13,7 +13,7 @@
 
 <header class="align-items-center container-fluid d-flex justify-content-between position-fixed py-3 top-0 z-2 bg-black bg-opacity-50">
   <a href="<?php echo get_site_url(); ?>">
-    <img src="<?php echo get_template_directory_uri(); ?>/img/logo-valkyrie-hq.png" class="img-fluid" height="50" width="171" alt="Valkyrie HQ logo">
+    <img src="<?php echo get_template_directory_uri(); ?>/img/logo-valkyrie-hq.png" class="logo img-fluid" height="50" width="171" alt="Valkyrie HQ logo">
     <h1 class="visually-hidden">
       <?php
         if ( is_front_page() || is_home() || is_front_page() && is_home() ) {
@@ -42,7 +42,7 @@
       ?>
     </div>
   </nav>
-  <div class="me-5 pe-5 me-lg-0 pe-lg-0">
+  <div class="me-5 mt-1 pe-5 me-lg-0 mt-0 pe-lg-0">
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">Book a session</button>
   </div>
 </header>
