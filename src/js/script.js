@@ -1,4 +1,5 @@
 // Bootstrap
+// Navbar
 import Collapse from 'bootstrap/js/dist/collapse.js'
 
 // Glide carousel
@@ -29,6 +30,8 @@ sliders.forEach((slider) => {
 });
 
 // Booking modal
+import Modal from 'bootstrap/js/dist/modal.js'
+
 const bookingModal = document.getElementById('bookingModal')
 bookingModal.addEventListener('shown.bs.modal', event => {
   let modalIframe = bookingModal.querySelector('iframe');
