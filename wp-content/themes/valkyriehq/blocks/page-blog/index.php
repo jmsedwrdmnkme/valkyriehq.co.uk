@@ -77,7 +77,7 @@
 <?php wp_reset_postdata();?>
 
 <div class="container">
-  <div class="row justify-content-center mb-5">
+  <div class="row justify-content-center mt-4 mb-5">
       <div class="col-auto">
         <?php if ($paged != 1) : ?> 
           <a class="btn btn-outline-primary" href="<?php echo get_previous_posts_page_link();?>">Newer posts</a>
