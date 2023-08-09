@@ -147,4 +147,5 @@ function register_acf_blocks() {
   register_block_type( __DIR__ . '/blocks/page-physio' );
   register_block_type( __DIR__ . '/blocks/page-coaches' );
   register_block_type( __DIR__ . '/blocks/page-contact' );
+  register_block_type( __DIR__ . '/blocks/page-blog' );
 }

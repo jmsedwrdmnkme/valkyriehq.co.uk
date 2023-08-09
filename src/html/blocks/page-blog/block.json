@@ -1,0 +1,14 @@
+{
+  "name": "acf/page-blog",
+  "title": "Blog page",
+  "description": "Blog page block.",
+  "style": [ "file:./style.css" ],
+  "category": "formatting",
+  "icon": "admin-comments",
+  "keywords": ["blog"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "index.php"
+  },
+  "align": "full"
+}
