@@ -13,7 +13,7 @@
       $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
       $args = array(
         'post_type' => 'post',
-        'posts_per_page' => 7,
+        'posts_per_page' => 10,
         'paged' => $paged
       );
       $custom_query = new WP_Query($args);
