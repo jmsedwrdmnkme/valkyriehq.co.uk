@@ -33,17 +33,30 @@
         $role = get_field('role', $post_id);
         $links = get_field('links', $post_id);
       ?>
-      <div class="text-lg-start col-lg-6 ms-lg-auto d-lg-flex justify-content-end">
+      <div class="text-lg-start col-lg-6 ms-lg-auto">
         <div class="col-lg-auto d-inline-block">
           <div class="h1 display-3 mt-5 border-primary border-bottom border-2 pb-3"><?php the_title(); ?></div>
           <div class="mt-3 h5 text-uppercase"><?php echo $role; ?></div>
           <?php if($links): ?>
-            <div class="d-none">
+            <div class="text-center mt-4">
               <?php foreach($links as $link): 
                 $url = $link['url'];
+                $url = strtolower($url);
               ?>
-              <a href="<?php echo $url; ?>" target="_blank">
-                Link
+              <a href="<?php echo $url; ?>" target="_blank" class="d-inline-block mx-1">
+                <svg width="40" height="40">
+                  <?php if (str_contains($url, 'facebook')) : ?>
+                    <use xlink:href="#facebook">
+                  <?php elseif (str_contains($url, 'twitter')) : ?>
+                    <use xlink:href="#twitter">
+                  <?php elseif (str_contains($url, 'youtube')) : ?>
+                    <use xlink:href="#youtube">
+                  <?php elseif (str_contains($url, 'instagram')) : ?>
+                    <use xlink:href="#instagram">
+                  <?php else : ?>
+                    <use xlink:href="#link">
+                  <?php endif; ?>
+                </svg>
               </a>
               <?php endforeach; ?>
             </div>
