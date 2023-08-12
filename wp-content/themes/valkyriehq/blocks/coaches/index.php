@@ -16,7 +16,7 @@
     <?php endif; ?>
   </div>
   <div class="container-fluid mt-1">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center position-relative">
       <?php
         $args = array(
           'post_type' => 'coach'

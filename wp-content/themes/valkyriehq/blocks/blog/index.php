@@ -44,7 +44,7 @@
              $args = array(
                'post_type'     => 'post',
                'showposts'     => 4,
-               'offset'        => 1,
+               'offset'        => 1
              );
             $the_query = new WP_Query($args);
             while ($the_query -> have_posts()) : 
