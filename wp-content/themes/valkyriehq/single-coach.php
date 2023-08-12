@@ -29,12 +29,12 @@
     </div>
 
     <div class="row">
-      <div class="col-lg mt-5">
+      <div class="col-xl mt-5">
         <?php echo $about; ?>
       </div>
 
       <?php if($gallery): ?>
-        <div class="col-lg-6 mt-4 mt-lg-5 d-none d-md-block ps-lg-5">
+        <div class="col-xl-6 mt-4 mt-lg-5 d-none d-md-block ps-xl-5">
           <div class="glide">
             <div class="glide__track mx-5" data-glide-el="track">
               <ul class="glide__slides">
