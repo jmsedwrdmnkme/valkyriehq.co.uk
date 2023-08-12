@@ -4,11 +4,9 @@
   }
 }
 
-#editor {
-  .editor-styles-wrapper {
-    background-color: black;
-    color: white;
-  }
+.editor-styles-wrapper {
+  background-color: black;
+  color: white;
 
   .wp-block {
     max-width: unset;
