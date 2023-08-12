@@ -1,10 +1,8 @@
 <?php get_header(); ?>
 <?php
-  $role = get_field('role');
   $tagline = get_field('tagline');
   $about = get_field('about');
   $gallery = get_field('gallery');
-  $links = get_field('links');
   $sessions = get_field('sessions');
 ?>
 <main id="main">
