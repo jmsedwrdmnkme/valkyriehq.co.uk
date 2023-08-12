@@ -30,8 +30,8 @@
       </div>
       <?php elseif (is_singular('coach')) : ?>
       <?php
-        $role = get_field($post_id, 'role');
-        $links = get_field($post_id, 'links');
+        $role = get_field('role', $post_id);
+        $links = get_field('links', $post_id);
       ?>
       <div class="text-lg-start col-lg-6 ms-lg-auto d-lg-flex justify-content-end">
         <div class="col-lg-auto d-inline-block">
