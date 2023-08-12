@@ -17,16 +17,11 @@ function valkyriehq_setup() {
 
   // CSS in editor
   add_theme_support( 'editor-styles' );
-  add_editor_style( 'style.css' );
+  add_editor_style( 'editor-style.css' );
 
   global $content_width;
 
   if ( ! isset( $content_width ) ) { $content_width = 1920; }
-}
-
-add_action( 'after_setup_theme', 'add_editor_styles_sub_dir' );
-function add_editor_styles_sub_dir() {
-  add_editor_style(trailingslashit( get_template_directory_uri() ) . '/editor-style.css');
 }
 
 add_action( 'wp_enqueue_scripts', 'valkyriehq_scripts' );
