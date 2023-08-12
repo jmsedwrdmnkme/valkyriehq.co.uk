@@ -36,7 +36,7 @@
       <?php if($gallery): ?>
         <div class="col-xl-6 mt-4 mt-lg-5 d-none d-md-block ps-xl-5">
           <div class="glide">
-            <div class="glide__track mx-5" data-glide-el="track">
+            <div class="glide__track mx-5 mx-xl-4" data-glide-el="track">
               <ul class="glide__slides">
                 <?php foreach($gallery as $media): 
                   $photo = $media['photo'];
