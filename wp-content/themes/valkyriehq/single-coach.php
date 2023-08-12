@@ -34,7 +34,7 @@
       </div>
 
       <?php if($gallery): ?>
-        <div class="col-lg-6 mt-4 mt-lg-5 d-none d-md-block">
+        <div class="col-lg-6 mt-4 mt-lg-5 d-none d-md-block ps-lg-5">
           <div class="glide">
             <div class="glide__track mx-5" data-glide-el="track">
               <ul class="glide__slides">
