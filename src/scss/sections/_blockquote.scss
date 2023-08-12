@@ -30,5 +30,7 @@
 .wp-block-quote {
   @extend .bg-secondary;
   @extend .p-3;
-  @extend .p-4;
+  @extend .p-lg-4;
+  font-family: $headings-font-family;
+  text-transform: uppercase;
 }
