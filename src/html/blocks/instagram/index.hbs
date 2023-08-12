@@ -17,7 +17,7 @@
         </div>
       </div>
       <div class="col-12 text-center mt-4">
-        <a href="facebook.com/hqvalkyrie/" target="_blank" class="d-inline-block mx-1">
+        <a href="//facebook.com/hqvalkyrie/" target="_blank" class="d-inline-block mx-1">
           <svg width="40" height="40">
             <use xlink:href="#facebook">
           </svg>
