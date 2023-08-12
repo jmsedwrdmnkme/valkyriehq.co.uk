@@ -6,7 +6,7 @@
       <div class="h1"><?php echo esc_html(get_the_title()); ?></div>
     </div>
   </div>
-  <div class="container">
+  <div class="container pb-5">
     <div class="row">
       <div class="col-lg-8 col-xl-9 mt-5">
         <?php the_content(); ?>
@@ -29,6 +29,8 @@
       </aside>
     </div>
   </div>
+  <?php echo do_blocks('<!-- wp:block {"ref":209} /-->'); ?>
+  <?php echo do_blocks('<!-- wp:block {"ref":212} /-->'); ?>
 </main>
 
 <?php get_footer(); ?>
