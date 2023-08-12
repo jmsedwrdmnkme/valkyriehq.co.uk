@@ -53,7 +53,7 @@
           <?php foreach($sessions as $session): 
             $session_id = $session->ID;
             $image_alt = get_post_meta($session_id, '_wp_attachment_image_alt', TRUE);
-            $image_src = get_the_post_thumbnail_url($session_id, 'column-16x9');
+            $image_src = wp_get_attachment_image($session_id, 'column-16x9');
             $title = get_the_title($session_id);
             $permalink = get_permalink($session_id);
           ?>
