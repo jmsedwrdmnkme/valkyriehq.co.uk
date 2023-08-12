@@ -22,29 +22,33 @@
 <div class="component__hero align-items-center d-flex justify-content-center position-relative overflow-hidden py-5">
   <div class="container my-5 py-5 position-relative z-1 text-center">
     <?php if (is_singular('post')) : ?>
-      <div class="col-lg-6 text-lg-start">
-        <div class="h1 display-3 mt-5 border-primary border-bottom border-2 pb-3 me-lg-3"><?php the_title(); ?></div>
-        <div class="mt-3 h5 text-uppercase">Posted by <a href="#author" class="text-primary"><?php the_author(); ?></a> on <span class="text-primary"><?php the_date(); ?></span></div>
+      <div class="text-lg-start col-lg-6">
+        <div class="col-lg-auto d-inline-block">
+          <div class="h1 display-3 mt-5 border-primary border-bottom border-2 pb-3"><?php the_title(); ?></div>
+          <div class="mt-3 h5 text-uppercase">Posted by <a href="#author" class="text-primary"><?php the_author(); ?></a> on <span class="text-primary"><?php the_date(); ?></span></div>
+        </div>
       </div>
       <?php elseif (is_singular('coach')) : ?>
       <?php
         $role = get_field('role');
         $links = get_field('links');
       ?>
-      <div class="col-lg-6 text-lg-start">
-        <div class="h1 display-3 mt-5 border-primary border-bottom border-2 pb-3 me-lg-3"><?php the_title(); ?></div>
-        <div class="mt-3 h5 text-uppercase"><?php echo $role; ?></div>
-        <?php if($links): ?>
-          <div class="d-none">
-            <?php foreach($links as $link): 
-              $url = $link['url'];
-            ?>
-            <a href="<?php echo $url; ?>" target="_blank">
-              Link
-            </a>
-            <?php endforeach; ?>
-          </div>
-        <?php endif; ?>
+      <div class="text-lg-start col-lg-6 ms-lg-auto">
+        <div class="col-lg-auto d-inline-block">
+          <div class="h1 display-3 mt-5 border-primary border-bottom border-2 pb-3"><?php the_title(); ?></div>
+          <div class="mt-3 h5 text-uppercase"><?php echo $role; ?></div>
+          <?php if($links): ?>
+            <div class="d-none">
+              <?php foreach($links as $link): 
+                $url = $link['url'];
+              ?>
+              <a href="<?php echo $url; ?>" target="_blank">
+                Link
+              </a>
+              <?php endforeach; ?>
+            </div>
+          <?php endif; ?>
+        </div>
       </div>
     <?php else : ?>
       <div class="h1 display-3 mt-5"><?php the_title(); ?></div>
