@@ -7,24 +7,26 @@
         </a>
         <small class="d-block mt-4 pt-2 col-xl-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</small>
         <div class="mt-3">
-          <a href="#" target="_blank" class="d-inline-block me-1">
+          <a href="facebook.com/hqvalkyrie/" target="_blank" class="d-inline-block mx-1">
             <svg width="40" height="40">
               <use xlink:href="#facebook">
             </svg>
           </a>
+          <!--
           <a href="#" target="_blank" class="d-inline-block mx-1">
             <svg width="40" height="40">
               <use xlink:href="#twitter">
             </svg>
           </a>
-          <a href="#" target="_blank" class="d-inline-block mx-1">
-            <svg width="40" height="40">
-              <use xlink:href="#instagram">
-            </svg>
-          </a>
-          <a href="#" target="_blank" class="d-inline-block mx-1">
+          <a href="youtube.com/watch?v=Fm7xxqp8mYs" target="_blank" class="d-inline-block mx-1">
             <svg width="40" height="40">
               <use xlink:href="#youtube">
+            </svg>
+          </a>
+          -->
+          <a href="//instagram.com/valkyrie.hq/" target="_blank" class="d-inline-block mx-1">
+            <svg width="40" height="40">
+              <use xlink:href="#instagram">
             </svg>
           </a>
         </div>

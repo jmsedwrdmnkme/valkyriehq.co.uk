@@ -149,3 +149,13 @@ function register_acf_blocks() {
   register_block_type( __DIR__ . '/blocks/page-contact' );
   register_block_type( __DIR__ . '/blocks/page-blog' );
 }
+
+// Post type default blocks
+<?php
+function blocks_register_template() {
+  $post_type_object = get_post_type_object( 'post' );
+  $post_type_object->template = array(
+    array( 'acf/get-started' ),
+  );
+}
+add_action( 'init', 'blocks_register_template' );
