@@ -27,7 +27,7 @@
     <div class="mb-5 pt-4 mt-4 border-top border-primary border-2">
       <div class="row align-items-center text-center text-md-start">
         <div class="col-md-auto">
-          <img class="rounded-circle" src="" loading="lazy" alt="" width="200" height="200" />
+          <img class="rounded-circle" src="<?php echo get_avatar_url(); ?>" loading="lazy" alt="" width="200" height="200" />
         </div>
         <div class="col-md py-4">
           <p class="text-primary h1"><?php the_author(); ?></p>
