@@ -43,26 +43,34 @@
           <p class="text-primary h1"><?php the_author(); ?></p>
           <p class="h3 h5">Author</p>
           <div class="mt-4 ms-n1">
-            <a href="<?php echo $facebook; ?>" target="_blank" class="d-inline-block mx-1">
-              <svg width="40" height="40">
-                <use xlink:href="#facebook">
-              </svg>
-            </a>
-            <a href="//twitter.com/<?php echo $facebook; ?>" target="_blank" class="d-inline-block mx-1">
-              <svg width="40" height="40">
-                <use xlink:href="#twitter">
-              </svg>
-            </a>
-            <a href="<?php echo $youtube; ?>" target="_blank" class="d-inline-block mx-1">
-              <svg width="40" height="40">
-                <use xlink:href="#youtube">
-              </svg>
-            </a>
-            <a href="<?php echo $instagram; ?>" target="_blank" class="d-inline-block mx-1">
-              <svg width="40" height="40">
-                <use xlink:href="#instagram">
-              </svg>
-            </a>
+            <?php if($facebook) : ?>
+              <a href="<?php echo $facebook; ?>" target="_blank" class="d-inline-block mx-1">
+                <svg width="40" height="40">
+                  <use xlink:href="#facebook">
+                </svg>
+              </a>
+            <?php endif; ?>
+            <?php if($twitter) : ?>
+              <a href="//twitter.com/<?php echo $twitter; ?>" target="_blank" class="d-inline-block mx-1">
+                <svg width="40" height="40">
+                  <use xlink:href="#twitter">
+                </svg>
+              </a>
+            <?php endif; ?>
+            <?php if($youtube) : ?>
+              <a href="<?php echo $youtube; ?>" target="_blank" class="d-inline-block mx-1">
+                <svg width="40" height="40">
+                  <use xlink:href="#youtube">
+                </svg>
+              </a>
+            <?php endif; ?>
+            <?php if($instagram) : ?>
+              <a href="<?php echo $instagram; ?>" target="_blank" class="d-inline-block mx-1">
+                <svg width="40" height="40">
+                  <use xlink:href="#instagram">
+                </svg>
+              </a>
+            <?php endif; ?>
           </div>
         </div>
       </div>
