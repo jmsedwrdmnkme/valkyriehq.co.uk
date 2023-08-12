@@ -35,7 +35,7 @@
         </div>
       </aside>
     </div>
-    <div class="mb-5 pt-4 mt-4 border-top border-primary border-2">
+    <div class="mb-5 pt-4 mt-4 border-top border-primary border-2" id="author">
       <div class="row align-items-center text-center text-md-start">
         <div class="col-md-auto">
           <img class="rounded-circle" src="<?php echo get_avatar_url($author_id, ['size' => '200']); ?>" loading="lazy" alt="" width="200" height="200" />
