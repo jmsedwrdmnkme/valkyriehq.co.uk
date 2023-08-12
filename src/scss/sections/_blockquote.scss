@@ -29,8 +29,19 @@
 
 .wp-block-quote {
   @extend .bg-secondary;
+  @extend .text-light;
   @extend .p-3;
   @extend .p-lg-4;
   font-family: $headings-font-family;
   text-transform: uppercase;
+
+  > p {
+    &:first-child {
+      content: '“';
+    }
+
+    &:last-of-type {
+      content: '”';
+    }
+  }
 }
