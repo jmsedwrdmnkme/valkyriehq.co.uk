@@ -24,6 +24,11 @@ function valkyriehq_setup() {
   if ( ! isset( $content_width ) ) { $content_width = 1920; }
 }
 
+add_action( 'after_setup_theme', 'add_editor_styles_sub_dir' );
+function add_editor_styles_sub_dir() {
+  add_editor_style(trailingslashit( get_template_directory_uri() ) . '/editor-style.css');
+}
+
 add_action( 'wp_enqueue_scripts', 'valkyriehq_scripts' );
 function valkyriehq_scripts() {
   wp_enqueue_style( 'valkyriehq-style', get_template_directory_uri() . '/style.css', array(), wp_get_theme()->get( 'Version' ) );
