@@ -1,0 +1,21 @@
+.single {
+  &__content {
+    > * {
+      &:not(:first-child) {
+        @extend .mt-4;
+      }
+    }
+
+    p {
+      &:first-child {
+        @extend .lead;
+      }
+    }
+
+    li {
+      &::marker {
+        color: $primary;
+      }
+    }
+  }
+}

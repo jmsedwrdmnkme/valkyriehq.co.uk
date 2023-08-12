@@ -4,7 +4,7 @@
   <?php echo do_blocks('<!-- wp:acf/hero {"name":"acf/hero","data":{"field_64c92d131c364":"","field_64c92d131c3a7":{"title":"","url":"","target":""}},"mode":"preview"} /-->'); ?>
   <div class="container pb-5">
     <div class="row">
-      <div class="col-lg-8 col-xl-9 mt-5">
+      <div class="single__content col-lg-8 col-xl-9 mt-5">
         <?php the_content(); ?>
       </div>
       <aside class="col-lg-4 col-xl-3 mt-4 mt-lg-5">
