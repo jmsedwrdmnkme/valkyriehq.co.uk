@@ -1,27 +1,13 @@
 <?php get_header(); ?>
 <?php
-  $role = get_field('role');
   $tagline = get_field('tagline');
   $about = get_field('about');
   $gallery = get_field('gallery');
-  $links = get_field('links');
   $sessions = get_field('sessions');
 ?>
 <main id="main">
   <?php echo do_blocks('<!-- wp:acf/hero {"name":"acf/hero","data":{"field_64c92d131c364":"","field_64c92d131c3a7":{"title":"","url":"","target":""}},"mode":"preview"} /-->'); ?>
   <?php the_content(); ?>
-
-    <?php if($links): ?>
-      <div class="d-none">
-        <?php foreach($links as $link): 
-          $url = $link['url'];
-        ?>
-        <a href="<?php echo $url; ?>" target="_blank">
-          Link
-        </a>
-        <?php endforeach; ?>
-      </div>
-    <?php endif; ?>
 
   <div class="container">
     <div class="mt-5 pb-5 border-bottom border-primary border-2 lead text-center">
