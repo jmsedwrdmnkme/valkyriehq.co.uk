@@ -36,11 +36,11 @@
   text-transform: uppercase;
 
   > p {
-    &:first-child {
+    &:first-child::before {
       content: '“';
     }
 
-    &:last-of-type {
+    &:last-of-type::after {
       content: '”';
     }
   }
