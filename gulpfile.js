@@ -53,7 +53,9 @@ export function sprite() {
 }
 
 export function images() {
-  return gulp.src('src/img/**/**/*')
+  gulp.src('src/img/screenshot.png')
+    .pipe(gulp.dest('wp-content/themes/valkyriehq/'))
+  return gulp.src(['src/img/**/**/*', '!src/img/screenshot.png'])
     .pipe(imagemin([
       gifsicle({interlaced: true}),
       mozjpeg({quality: 75, progressive: true}),
