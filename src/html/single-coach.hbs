@@ -11,40 +11,64 @@
   <?php echo do_blocks('<!-- wp:acf/hero {"name":"acf/hero","data":{"field_64c92d131c364":"","field_64c92d131c3a7":{"title":"","url":"","target":""}},"mode":"preview"} /-->'); ?>
   <?php the_content(); ?>
 
-  <div>
-    <?php echo $role; ?>
+    <?php if($links): ?>
+      <div class="d-none">
+        <?php foreach($links as $link): 
+          $url = $link['url'];
+        ?>
+        <a href="<?php echo $url; ?>" target="_blank">
+          Link
+        </a>
+        <?php endforeach; ?>
+      </div>
+    <?php endif; ?>
+
+  <div class="container">
+    <div class="mt-5 pb-5 border-bottom border-primary border-2 lead text-center">
+      <?php echo $tagline; ?>
+    </div>
+
+    <div class="row">
+      <div class="col-lg mt-5">
+        <?php echo $about; ?>
+      </div>
+
+      <?php if($gallery): ?>
+        <div class="col-lg-6 mt-4 mt-lg-5 d-none d-md-block">
+          <div class="glide">
+            <div class="glide__track mx-5" data-glide-el="track">
+              <ul class="glide__slides">
+                <?php foreach($gallery as $media): 
+                  $photo = $media['photo'];
+                  $photo_alt = get_post_meta($photo, '_wp_attachment_image_alt', TRUE);
+                  $photo_src = wp_get_attachment_image_url($photo, 'column-16x9');
+                ?>
+                  <li class="glide__slide">
+                    <img loading="lazy" src="<?php echo $photo_src; ?>" alt="<?php echo $photo_alt; ?>" class="img-fluid w-100" width="735" height="415">
+                  </li>
+                <?php endforeach; ?>
+              </ul>
+            </div>
+            <div class="glide__arrows" data-glide-el="controls">
+              <button class="glide__arrow glide__arrow--left" data-glide-dir="&lt;">
+                <span class="visually-hidden">
+                  prev
+                </span>
+              </button>
+              <button class="glide__arrow glide__arrow--right" data-glide-dir="&gt;">
+                <span class="visually-hidden">
+                  next
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      <?php endif; ?>
+    </div>
   </div>
-
-  <div>
-    <?php echo $tagline; ?>
-  </div>
-
-  <div>
-    <?php echo $about; ?>
-  </div>
-
-  <?php if($links): ?>
-    <?php foreach($links as $link): 
-      $url = $link['url'];
-    ?>
-    <a href="<?php echo $url; ?>" target="_blank">
-      Link
-    </a>
-    <?php endforeach; ?>
-  <?php endif; ?>
-
-  <?php if($gallery): ?>
-    <?php foreach($gallery as $media): 
-      $photo = $media['photo'];
-      $photo_alt = get_post_meta($photo, '_wp_attachment_image_alt', TRUE);
-      $photo_src = wp_get_attachment_image_url($photo, 'column-16x9');
-    ?>
-      <img loading="lazy" src="<?php echo $photo_src; ?>" alt="<?php echo $photo_alt; ?>" class="img-fluid w-100" width="735" height="415">
-    <?php endforeach; ?>
-  <?php endif; ?>
 
   <?php if($sessions): ?>
-    <div class="component__coaches py-5">
+    <div class="component__coaches py-5 mt-3 mb-4">
       <div class="container text-center">
         <h2 class="display-5">Sessions <?php the_title(); ?> teaches&hellip;</h2>
       </div>
