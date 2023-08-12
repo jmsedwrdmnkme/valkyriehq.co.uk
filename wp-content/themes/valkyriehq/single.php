@@ -1,4 +1,8 @@
 <?php get_header(); ?>
+<?php
+  global $post;
+  $author_id = $post->post_author;
+?>
 
 <main id="main">
   <?php echo do_blocks('<!-- wp:acf/hero {"name":"acf/hero","data":{"field_64c92d131c364":"","field_64c92d131c3a7":{"title":"","url":"","target":""}},"mode":"preview"} /-->'); ?>
@@ -27,7 +31,7 @@
     <div class="mb-5 pt-4 mt-4 border-top border-primary border-2">
       <div class="row align-items-center text-center text-md-start">
         <div class="col-md-auto">
-          <img class="rounded-circle" src="<?php echo get_avatar_url(); ?>" loading="lazy" alt="" width="200" height="200" />
+          <img class="rounded-circle" src="<?php echo get_avatar_url($author_id); ?>" loading="lazy" alt="" width="200" height="200" />
         </div>
         <div class="col-md py-4">
           <p class="text-primary h1"><?php the_author(); ?></p>
