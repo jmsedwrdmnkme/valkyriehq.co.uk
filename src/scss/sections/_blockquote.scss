@@ -26,3 +26,9 @@
     text-align: right;
   }
 }
+
+.wp-block-quote {
+  @extend .bg-secondary;
+  @extend .p-3;
+  @extend .p-4;
+}
