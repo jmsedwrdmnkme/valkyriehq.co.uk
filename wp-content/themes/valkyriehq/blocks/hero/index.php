@@ -20,10 +20,8 @@
     $image_mobile = get_the_post_thumbnail_url($image_id, 'hero-home-mobile');
 ?>
 <div class="component__hero align-items-center d-flex justify-content-center position-relative overflow-hidden py-5">
-  <div class="container my-5 pt-5 position-relative z-1 text-center <?php echo (is_singular()) ? ' col-lg-6 border-2 border-primary border-bottom' : ' pb-5'; ?>">
+  <div class="container my-5 py-5 position-relative z-1 text-center">
     <div class="h1 display-3 mt-5"><?php the_title(); ?></div>
-    <?php if (is_singular()) : ?>
-    <?php endif; ?>
     <?php if ($text) : ?>
       <p class="lead mt-3"><?php echo $text; ?></p>
     <?php endif; ?>
