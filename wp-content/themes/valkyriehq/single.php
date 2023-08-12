@@ -29,9 +29,31 @@
         <div class="col-md-auto">
           <img class="rounded-circle" src="" loading="lazy" alt="" width="200" height="200" />
         </div>
-        <div class="col-md">
+        <div class="col-md py-4">
           <p class="text-primary h2"><?php the_author(); ?></p>
           <p class="h3 h6">Author</p>
+          <div class="mt-3">
+            <a href="//facebook.com/hqvalkyrie/" target="_blank" class="d-inline-block mx-1">
+              <svg width="40" height="40">
+                <use xlink:href="#facebook">
+              </svg>
+            </a>
+            <a href="#" target="_blank" class="d-inline-block mx-1">
+              <svg width="40" height="40">
+                <use xlink:href="#twitter">
+              </svg>
+            </a>
+            <a href="youtube.com/watch?v=Fm7xxqp8mYs" target="_blank" class="d-inline-block mx-1">
+              <svg width="40" height="40">
+                <use xlink:href="#youtube">
+              </svg>
+            </a>
+            <a href="//instagram.com/valkyrie.hq/" target="_blank" class="d-inline-block mx-1">
+              <svg width="40" height="40">
+                <use xlink:href="#instagram">
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </div>
