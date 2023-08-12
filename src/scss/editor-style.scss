@@ -1,0 +1,46 @@
+/*
+ * Theme specific overrides
+ */
+
+@import "variables/variables";
+
+/*
+ * Bootstrap
+ */
+
+// Configuration
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/variables-dark";
+@import "../../node_modules/bootstrap/scss/maps";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/utilities";
+
+/*
+ * Editor specific styles
+ */
+.editor-styles-wrapper {
+  background-color: black;
+  color: white;
+
+  .wp-block {
+    max-width: unset;
+  }
+
+  .edit-post-visual-editor__post-title-wrapper {
+    padding: 0 1rem;
+    background: $secondary;
+
+    &::before  {
+      content: 'Page title:';
+      display: inline-block;
+      position: relative;
+      top: -8px;
+    }
+
+    h1 {
+      margin-left: 1rem;
+      display: inline-block;
+    }
+  }
+}
