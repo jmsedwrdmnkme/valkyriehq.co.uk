@@ -2,6 +2,12 @@
 <?php
   global $post;
   $author_id = $post->post_author;
+  $user_info = get_userdata($author_id);
+  $facebook = $user_info->facebook;
+  $instagram = $user_info->instagram;
+  $linkedin = $user_info->linkedin;
+  $twitter = $user_info->twitter;
+  $youtube = $user_info->youtube;
 ?>
 
 <main id="main">
@@ -37,22 +43,22 @@
           <p class="text-primary h1"><?php the_author(); ?></p>
           <p class="h3 h5">Author</p>
           <div class="mt-4 ms-n1">
-            <a href="//facebook.com/hqvalkyrie/" target="_blank" class="d-inline-block mx-1">
+            <a href="<?php echo $facebook; ?>" target="_blank" class="d-inline-block mx-1">
               <svg width="40" height="40">
                 <use xlink:href="#facebook">
               </svg>
             </a>
-            <a href="#" target="_blank" class="d-inline-block mx-1">
+            <a href="//twitter.com/<?php echo $facebook; ?>" target="_blank" class="d-inline-block mx-1">
               <svg width="40" height="40">
                 <use xlink:href="#twitter">
               </svg>
             </a>
-            <a href="youtube.com/watch?v=Fm7xxqp8mYs" target="_blank" class="d-inline-block mx-1">
+            <a href="<?php echo $youtube; ?>" target="_blank" class="d-inline-block mx-1">
               <svg width="40" height="40">
                 <use xlink:href="#youtube">
               </svg>
             </a>
-            <a href="//instagram.com/valkyrie.hq/" target="_blank" class="d-inline-block mx-1">
+            <a href="<?php echo $instagram; ?>" target="_blank" class="d-inline-block mx-1">
               <svg width="40" height="40">
                 <use xlink:href="#instagram">
               </svg>
