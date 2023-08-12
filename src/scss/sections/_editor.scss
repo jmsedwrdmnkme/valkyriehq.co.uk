@@ -4,6 +4,30 @@
   }
 }
 
-.wp-block {
-  max-width: unset;
+#editor {
+  .editor-styles-wrapper {
+    background-color: black;
+    color: white;
+  }
+
+  .wp-block {
+    max-width: unset;
+  }
+
+  .edit-post-visual-editor__post-title-wrapper {
+    @extend .px-3;
+    background: $secondary;
+
+    &::before  {
+      content: 'Page title:';
+      display: inline-block;
+      position: relative;
+      top: -8px;
+    }
+
+    h1 {
+      @extend .ms-3;
+      display: inline-block;
+    }
+  }
 }
