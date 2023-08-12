@@ -22,7 +22,8 @@
 <div class="component__hero align-items-center d-flex justify-content-center position-relative overflow-hidden py-5">
   <div class="container my-5 py-5 position-relative z-1 text-center">
     <?php if (is_singular()) : ?>
-      <div class="h1 display-3 mt-5 col-lg-6 border-primary border-bottom border-2"><?php the_title(); ?></div>
+      <div class="h1 display-3 mt-5 col-lg-6 border-primary border-bottom border-2 pb-3"><?php the_title(); ?></div>
+      <small class="d-block mt-3">Posted by <span class="text-primary"><?php the_author(); ?></span> on <span class="text-primary"><?php the_date(); ?></span></small>
     <?php else : ?>
       <div class="h1 display-3 mt-5"><?php the_title(); ?></div>
       <?php if ($text) : ?>
