@@ -36,8 +36,10 @@
   <?php if($gallery): ?>
     <?php foreach($gallery as $media): 
       $photo = $media['photo'];
-      echo $photo;
+      $photo_alt = get_post_meta($photo, '_wp_attachment_image_alt', TRUE);
+      $photo_src = get_the_post_thumbnail_url($photo, 'column-16x9');
     ?>
+      <img loading="lazy" src="<?php echo $photo_src; ?>" alt="<?php echo $photo_alt; ?>" class="img-fluid w-100" width="735" height="415">
     <?php endforeach; ?>
   <?php endif; ?>
 
