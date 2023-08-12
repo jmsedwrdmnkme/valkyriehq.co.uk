@@ -20,42 +20,46 @@
   $image_mobile = get_the_post_thumbnail_url($image_id, 'hero-home-mobile');
 ?>
 <div class="component__hero align-items-center d-flex justify-content-center position-relative overflow-hidden py-5">
-  <div class="container my-5 py-5 position-relative z-1 text-center">
-    <?php if (is_singular('post')) : ?>
+  <?php if (is_singular('post')) : ?>
+    <div class="container my-5 py-5 position-relative z-1 text-center">
       <div class="col-lg-6 text-lg-start">
         <div class="h1 display-3 mt-5 border-primary border-bottom border-2 pb-3 me-lg-3"><?php the_title(); ?></div>
         <div class="mt-3 h5 text-uppercase">Posted by <a href="#author" class="text-primary"><?php the_author(); ?></a> on <span class="text-primary"><?php the_date(); ?></span></div>
       </div>
-      <?php elseif (is_singular('coach')) : ?>
-      <?php
-        $role = get_field('role');
-        $links = get_field('links');
-      ?>
-      <div class="col-lg-6 text-lg-start justify-self-end">
+    </div>
+  <?php elseif (is_singular('coach')) : ?>
+    <?php
+      $role = get_field('role');
+      $links = get_field('links');
+    ?>
+    <div class="container my-5 py-5 position-relative z-1 text-center align-items-end">
+      <div class="col-lg-6 text-lg-start">
         <div class="h1 display-3 mt-5 border-primary border-bottom border-2 pb-3 me-lg-3"><?php the_title(); ?></div>
         <div class="mt-3 h5 text-uppercase"><?php echo $role; ?></div>
         <?php if($links): ?>
-          <div class="d-none">
-            <?php foreach($links as $link): 
-              $url = $link['url'];
-            ?>
-            <a href="<?php echo $url; ?>" target="_blank">
-              Link
-            </a>
-            <?php endforeach; ?>
-          </div>
+        <div class="d-none">
+          <?php foreach($links as $link): 
+             $url = $link['url'];
+             ?>
+             <a href="<?php echo $url; ?>" target="_blank">
+               Link
+             </a>
+             <?php endforeach; ?>
+        </div>
         <?php endif; ?>
       </div>
-    <?php else : ?>
+    </div>
+  <?php else : ?>
+    <div class="container my-5 py-5 position-relative z-1 text-center">
       <div class="h1 display-3 mt-5"><?php the_title(); ?></div>
       <?php if ($text) : ?>
-        <p class="lead mt-3"><?php echo $text; ?></p>
+      <p class="lead mt-3"><?php echo $text; ?></p>
       <?php endif; ?>
       <?php if ($button_link) : ?>
-        <a href="<?php echo esc_url($link_url); ?>"  target="<?php echo esc_attr($link_target); ?>" class="btn btn-outline-primary mt-2"><?php echo esc_html($link_title); ?></a>
+      <a href="<?php echo esc_url($link_url); ?>"  target="<?php echo esc_attr($link_target); ?>" class="btn btn-outline-primary mt-2"><?php echo esc_html($link_title); ?></a>
       <?php endif; ?>
-    <?php endif; ?>
-  </div>
+    </div>
+  <?php endif; ?>
   <picture>
     <source media="(max-width: 767.98px)" srcset="<?php echo $image_mobile; ?>">
     <source media="(min-width: 768px)" srcset="<?php echo $image_desktop; ?>">
