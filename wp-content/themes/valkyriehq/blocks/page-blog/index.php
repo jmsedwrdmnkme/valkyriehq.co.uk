@@ -43,7 +43,9 @@
             </div>
             <div class="col-lg mt-4 mt-lg-5">
               <div class="text-center text-lg-start">
-                <h2><?php the_title(); ?></h2>
+                <a href="<?php the_permalink(); ?>">
+                  <h2><?php the_title(); ?></h2>
+                </a>
                 <small class="d-block mt-3">Posted by <span class="text-primary"><?php the_author(); ?></span> on <span class="text-primary"><?php the_date(); ?></span></small>
               </div>
               <p class="mt-3">
