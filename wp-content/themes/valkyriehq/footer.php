@@ -5,7 +5,7 @@
         <a href="<?php echo get_site_url(); ?>">
           <img src="<?php echo get_template_directory_uri(); ?>/img/logo-valkyrie-hq.png" class="img-fluid" alt="Valkyrie HQ logo" width="171" height="50">
         </a>
-        <small class="d-block mt-4 pt-2 col-xl-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</small>
+        <small class="d-block mt-4 pt-2 col-xl-10"><?php echo get_option('blogdescription'); ?></small>
         <div class="mt-3">
           <a href="//facebook.com/hqvalkyrie/" target="_blank" class="d-inline-block mx-1">
             <svg width="40" height="40">

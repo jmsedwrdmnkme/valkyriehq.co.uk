@@ -3,7 +3,7 @@
    * FAQs Block Template.
    */
 ?>
-<div class="component__faqs py-5">
+<div class="component__faqs py-5" id="faqs">
   <div class="container text-center">
     <h2 class="display-5">FAQs</h2>
   </div>
