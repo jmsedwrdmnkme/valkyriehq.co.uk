@@ -3,6 +3,7 @@
   global $post;
   $author_id = $post->post_author;
   $user_info = get_userdata($author_id);
+  $biography = $user_info->description;
   $facebook = $user_info->facebook;
   $instagram = $user_info->instagram;
   $linkedin = $user_info->linkedin;
@@ -41,7 +42,7 @@
         </div>
         <div class="col-md py-4">
           <p class="text-primary h1"><?php the_author(); ?></p>
-          <p class="h3 h5">Author</p>
+          <p class="h3 h5"><?php echo $biography; ?></p>
           <div class="mt-4 ms-n1">
             <?php if($facebook) : ?>
               <a href="<?php echo $facebook; ?>" target="_blank" class="d-inline-block mx-1">
