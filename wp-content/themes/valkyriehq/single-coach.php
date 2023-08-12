@@ -23,7 +23,7 @@
   <?php if($links): ?>
     <?php foreach($sessions as $session): 
       $link_id = $link->ID;
-      $url = get_sub_field('url');
+      $url = get_sub_field($link_id, 'url');
       echo $url;
     ?>
     <?php endforeach; ?>
@@ -32,7 +32,7 @@
   <?php if($gallery): ?>
     <?php foreach($sessions as $session): 
       $gallery_id = $gallery->ID;
-      $photo = get_sub_field('photo');
+      $photo = get_sub_field($gallery_id, 'photo');
       echo $photo;
     ?>
     <?php endforeach; ?>
