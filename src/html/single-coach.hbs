@@ -21,7 +21,7 @@
   </div>
 
   <?php if($links): ?>
-    <?php foreach($sessions as $session): 
+    <?php foreach($links as $link): 
       $link_id = $link->ID;
       $url = get_sub_field($link_id, 'url');
       echo $url;
@@ -30,9 +30,9 @@
   <?php endif; ?>
 
   <?php if($gallery): ?>
-    <?php foreach($sessions as $session): 
-      $gallery_id = $gallery->ID;
-      $photo = get_sub_field($gallery_id, 'photo');
+    <?php foreach($gallery as $media): 
+      $media_id = $gallery->ID;
+      $photo = get_sub_field($media_id, 'photo');
       echo $photo;
     ?>
     <?php endforeach; ?>
