@@ -27,7 +27,7 @@
         <div class="mt-3 h5 text-uppercase">Posted by <span class="text-primary"><?php the_author(); ?></span> on <span class="text-primary"><?php the_date(); ?></span></div>
     </div>
     <?php else : ?>
-      <div class="h1 display-3 mt-5"><?php the_title(); ?></div>
+      <div class="h1 display-3 mt-5 me-lg-3"><?php the_title(); ?></div>
       <?php if ($text) : ?>
         <p class="lead mt-3"><?php echo $text; ?></p>
       <?php endif; ?>
