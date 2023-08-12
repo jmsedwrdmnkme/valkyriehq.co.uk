@@ -29,18 +29,6 @@
     <?php else if (is_singular('coach')) : ?>
       <div class="col-lg-6 text-lg-start justify-self-end">
         <div class="h1 display-3 mt-5 border-primary border-bottom border-2 pb-3 me-lg-3"><?php the_title(); ?></div>
-        <div class="mt-3 h5 text-uppercase"><?php echo $role; ?></div>
-        <?php if($links): ?>
-          <div class="d-none">
-            <?php foreach($links as $link): 
-              $url = $link['url'];
-            ?>
-            <a href="<?php echo $url; ?>" target="_blank">
-              Link
-            </a>
-            <?php endforeach; ?>
-          </div>
-        <?php endif; ?>
       </div>
     <?php else : ?>
       <div class="h1 display-3 mt-5"><?php the_title(); ?></div>
