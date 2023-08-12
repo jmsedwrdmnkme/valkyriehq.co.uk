@@ -23,11 +23,11 @@
   <div class="container my-5 py-5 position-relative z-1 text-center">
     <?php if (is_singular()) : ?>
     <div class="col-lg-6 text-lg-start">
-        <div class="h1 display-3 mt-5 border-primary border-bottom border-2 pb-3"><?php the_title(); ?></div>
+        <div class="h1 display-3 mt-5 border-primary border-bottom border-2 pb-3 me-lg-3"><?php the_title(); ?></div>
         <div class="mt-3 h5 text-uppercase">Posted by <span class="text-primary"><?php the_author(); ?></span> on <span class="text-primary"><?php the_date(); ?></span></div>
     </div>
     <?php else : ?>
-      <div class="h1 display-3 mt-5 me-lg-3"><?php the_title(); ?></div>
+      <div class="h1 display-3 mt-5"><?php the_title(); ?></div>
       <?php if ($text) : ?>
         <p class="lead mt-3"><?php echo $text; ?></p>
       <?php endif; ?>
