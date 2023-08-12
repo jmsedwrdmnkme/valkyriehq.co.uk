@@ -1,11 +1,7 @@
 <?php get_header(); ?>
 
 <main id="main">
-  <div class="bg-secondary">
-    <div class="container">
-      <div class="h1"><?php echo esc_html(get_the_title()); ?></div>
-    </div>
-  </div>
+  <?php echo do_blocks('<!-- wp:acf/hero {"name":"acf/hero","data":{"field_64c92d131c364":"","field_64c92d131c3a7":{"title":"","url":"","target":""}},"mode":"preview"} /-->'); ?>
   <div class="container pb-5">
     <div class="row">
       <div class="col-lg-8 col-xl-9 mt-5">
