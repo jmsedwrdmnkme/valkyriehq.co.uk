@@ -176,7 +176,8 @@ function valkyrie_allowed_block_types ($block_editor_context, $editor_context) {
 			'acf/page-physio',
 			'acf/page-coaches',
 			'acf/page-contact',
-			'acf/page-blog'
+			'acf/page-blog',
+			'acf/post-caoches'
 		);
 	}
 	return $block_editor_context;

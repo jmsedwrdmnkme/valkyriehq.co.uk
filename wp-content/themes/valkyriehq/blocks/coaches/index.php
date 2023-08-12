@@ -23,8 +23,8 @@
         );
         $the_query = new WP_Query($args);
         while ($the_query -> have_posts()) :
-		  $the_query -> the_post();
-		  $post_id = get_the_ID();
+          $the_query -> the_post();
+          $post_id = get_the_ID();
           $image_alt = get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', TRUE);
           $image_src = get_the_post_thumbnail_url($post_id, 'column-16x9');
       ?>
