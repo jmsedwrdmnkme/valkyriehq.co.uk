@@ -35,10 +35,6 @@ export function scripts() {
 }
 
 export function styles() {
-  gulp.src('src/scss/editor-style.scss')
-    .pipe(sass({outputStyle: 'compressed'}))
-    .pipe(cleanCSS())
-    .pipe(gulp.dest('wp-content/themes/valkyriehq/'));
   return gulp.src('src/scss/style.scss')
     .pipe(sass({outputStyle: 'compressed'}))
     .pipe(cleanCSS())
