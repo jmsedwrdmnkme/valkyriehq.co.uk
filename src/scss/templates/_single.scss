@@ -12,12 +12,6 @@
       }
     }
 
-    li {
-      &::marker {
-        color: $primary;
-      }
-    }
-
     + aside {
       .position-sticky {
         top: 7rem;
