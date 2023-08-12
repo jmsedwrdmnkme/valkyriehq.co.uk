@@ -24,6 +24,8 @@
         </div>
       </aside>
     </div>
+    <div class="single__meta mb-5 pt-4 mt-4 border-top border-primary border-2">
+    </div>
   </div>
   <?php echo do_blocks('<!-- wp:block {"ref":209} /-->'); ?>
   <?php echo do_blocks('<!-- wp:block {"ref":212} /-->'); ?>
