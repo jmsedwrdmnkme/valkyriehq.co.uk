@@ -38,7 +38,7 @@
           <div class="h1 display-3 mt-5 border-primary border-bottom border-2 pb-3"><?php the_title(); ?></div>
           <div class="mt-3 h5 text-uppercase"><?php echo $role; ?></div>
           <?php if($links): ?>
-            <div class="text-center mt-4">
+            <div class="mt-4 mx-n1">
               <?php foreach($links as $link): 
                 $url = $link['url'];
                 $url = strtolower($url);
