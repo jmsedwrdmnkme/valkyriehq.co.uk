@@ -25,6 +25,15 @@
       </aside>
     </div>
     <div class="single__meta mb-5 pt-4 mt-4 border-top border-primary border-2">
+      <div class="row align-items-center">
+        <div class="col-lg-auto">
+          <img class="rounded-circle" src="" loading="lazy" alt="" width="200" height="200" />
+        </div>
+        <div class="col-lg">
+          <p class="text-primary h3"><?php the_author(); ?></p>
+          <p class="h3 h6">Author</p>
+        </div>
+      </div>
     </div>
   </div>
   <?php echo do_blocks('<!-- wp:block {"ref":209} /-->'); ?>
