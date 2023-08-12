@@ -10,29 +10,32 @@
 <main id="main">
   <?php echo do_blocks('<!-- wp:acf/hero {"name":"acf/hero","data":{"field_64c92d131c364":"","field_64c92d131c3a7":{"title":"","url":"","target":""}},"mode":"preview"} /-->'); ?>
   <?php the_content(); ?>
+
   <div>
-	<?php echo $role; ?>
+    <?php echo $role; ?>
   </div>
+
   <div>
-	<?php echo $tagline; ?>
+    <?php echo $tagline; ?>
   </div>
+
   <div>
-	<?php echo $about; ?>
+    <?php echo $about; ?>
   </div>
 
   <?php if($links): ?>
     <?php foreach($links as $link): 
-      $link_id = $link->ID;
-      $url = get_sub_field($link_id, 'url');
-      echo $url;
+      $url = $link['url'];
     ?>
+    <a href="<?php echo $url; ?>" target="_blank">
+      Link
+    </a>
     <?php endforeach; ?>
   <?php endif; ?>
 
   <?php if($gallery): ?>
     <?php foreach($gallery as $media): 
-      $media_id = $gallery->ID;
-      $photo = get_sub_field($media_id, 'photo');
+      $photo = $media['photo'];
       echo $photo;
     ?>
     <?php endforeach; ?>
@@ -47,7 +50,7 @@
         <div class="row justify-content-center position-relative">
           <?php foreach($sessions as $session): 
             $session_id = $session->ID;
-            $image_alt = get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', TRUE);
+            $image_alt = get_post_meta($session_id, '_wp_attachment_image_alt', TRUE);
             $image_src = get_the_post_thumbnail_url($session_id, 'column-16x9');
             $title = get_the_title($session_id);
             $permalink = get_permalink($session_id);
