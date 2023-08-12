@@ -149,3 +149,35 @@ function register_acf_blocks() {
   register_block_type( __DIR__ . '/blocks/page-contact' );
   register_block_type( __DIR__ . '/blocks/page-blog' );
 }
+
+// Allowed blocks
+add_filter( 'allowed_block_types_all', 'valkyrie_allowed_block_types', 10, 2 );
+function valkyrie_allowed_block_types ($block_editor_context, $editor_context) {
+	if (!empty($editor_context->post)) {
+		return array(
+			'core/paragraph',
+			'core/image',
+			'core/heading',
+			'core/list',
+			'core/quote',
+			'core/html',
+			'acf/hero-home',
+			'acf/hero',
+			'acf/sessions',
+			'acf/blog',
+			'acf/about',
+			'acf/coaches',
+			'acf/testimonials',
+			'acf/get-started',
+			'acf/instagram',
+			'acf/faqs',
+			'acf/page-about',
+			'acf/page-sessions',
+			'acf/page-physio',
+			'acf/page-coaches',
+			'acf/page-contact',
+			'acf/page-blog'
+		);
+	}
+	return $block_editor_context;
+}
