@@ -2,17 +2,17 @@
 <?php
   $youtube_url = get_field('youtube_url');
   preg_match('%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', $youtube_url, $match);
-  $youtube_id = $match[1];
-  $youtube_thumbnail = '//img.youtube.com/vi/' . $youtube_id . '/sddefault.jpg';
+  $youtube_thumbnail = '//img.youtube.com/vi/' . $match[1] . '/maxresdefault.jpg';
   $description = get_field('description');
 ?>
 <main id="main">
   <?php echo do_blocks('<!-- wp:acf/hero {"name":"acf/hero","data":{"field_64c92d131c364":"","field_64c92d131c3a7":{"title":"","url":"","target":""}},"mode":"preview"} /-->'); ?>
   <?php the_content(); ?>
 
-  <?php echo $youtube_url; ?><br>
-  <?php echo $youtube_id; ?><br>
-  <?php echo $youtube_thumbnail; ?>
+  <img src="<?php echo $youtube_thumbnail; ?>" alt="Session intro video thumbnail" width="1280" height="720">
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#videoModal">
+    Launch demo modal
+  </button>
 
   <?php
     global $post;
@@ -67,5 +67,16 @@
   <?php echo do_blocks('<!-- wp:block {"ref":209} /-->'); ?>
   <?php echo do_blocks('<!-- wp:block {"ref":212} /-->'); ?>
 </main>
+
+<div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body ratio ratio-16x9">
+        <iframe loading="lazy" src="<?php echo $youtube_url; ?>"></iframe>
+      </div>
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
 
 <?php get_footer(); ?>
