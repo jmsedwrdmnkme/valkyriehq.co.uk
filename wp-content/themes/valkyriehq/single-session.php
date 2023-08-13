@@ -73,7 +73,7 @@
   <div class="modal-dialog modal-dialog-centered modal-xl">
     <div class="modal-content">
       <div class="modal-body ratio ratio-16x9">
-        <iframe loading="lazy" src="<?php echo $youtube_embed; ?>&autoplay=1" autoplay></iframe>
+        <iframe loading="lazy" data-src="<?php echo $youtube_embed; ?>?autoplay=1" autoplay frameborder="0" allowfullscreen></iframe>
       </div>
       <button type="button" class="btn btn-primary position-absolute top-100 end-0 mt-3" data-bs-dismiss="modal">Close</button>
     </div>
@@ -82,14 +82,14 @@
   <script>
     const videoModal = document.getElementById('videoModal')
     const videoDom = videoModal.querySelector('iframe');
+    const videoSrc = videoDom.attribute('data-src');
 
     videoModal.addEventListener('shown.bs.modal', event => {
-      videoDom.load();
-      videoDom.play();
+      videoDom.src = videoSrc;
     })
 
     videoModal.addEventListener('hidden.bs.modal', event => {
-      videoDom.pause();
+      videoDom.src = '';
     })
   </script>
 </div>
