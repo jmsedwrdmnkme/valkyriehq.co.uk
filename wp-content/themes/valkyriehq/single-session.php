@@ -80,7 +80,7 @@
 
   <script>
     const videoModal = document.getElementById('videoModal')
-    const videoDom = videoModal.querySelector('imframe');
+    const videoDom = videoModal.querySelector('iframe');
 
     videoModal.addEventListener('shown.bs.modal', event => {
       videoDom.load();
