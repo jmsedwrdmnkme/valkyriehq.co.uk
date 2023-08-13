@@ -1,12 +1,13 @@
 <?php get_header(); ?>
-utU
 <?php
+  $youtube_url = get_field('youtube_url');
+  $description = get_field('description');
 ?>
 <main id="main">
   <?php echo do_blocks('<!-- wp:acf/hero {"name":"acf/hero","data":{"field_64c92d131c364":"","field_64c92d131c3a7":{"title":"","url":"","target":""}},"mode":"preview"} /-->'); ?>
   <?php the_content(); ?>
 
-  <?php ZZ
+  <?php
     global $post;
     $coaches = get_posts(
       array(
