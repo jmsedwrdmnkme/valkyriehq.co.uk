@@ -21,8 +21,10 @@
     </div>
   </div>
 
-  <div class="columns mt-5 pb-5 border-bottom border-primary border-2">
-    <?php echo $description; ?>
+  <div class="container mt-5 ">
+    <div class="columns pb-5 border-bottom border-primary border-2">
+      <?php echo $description; ?>
+    </div>
   </div>
 
   <?php
@@ -70,7 +72,9 @@
           <?php endforeach; ?>
         </div>
       </div>
-      <div class="border-bottom border-primary border-2 container mt-5"></div>
+      <div class="container">
+        <div class="border-bottom border-primary border-2 mt-5"></div>
+      </div>
     </div>
   <?php endif; ?>
 
