@@ -10,8 +10,9 @@
   <?php echo do_blocks('<!-- wp:acf/hero {"name":"acf/hero","data":{"field_64c92d131c364":"","field_64c92d131c3a7":{"title":"","url":"","target":""}},"mode":"preview"} /-->'); ?>
   <?php the_content(); ?>
 
-  <button type="button" class="ratio ratio-16x9" data-bs-toggle="modal" data-bs-target="#videoModal">
+  <button type="button" class="ratio ratio-16x9 border-0" data-bs-toggle="modal" data-bs-target="#videoModal">
     <img src="<?php echo $youtube_thumbnail; ?>" alt="Session intro video thumbnail" width="1280" height="720">
+    <span class="d-none">Play session intro video</span>
   </button>
 
   <?php
@@ -72,9 +73,9 @@
   <div class="modal-dialog modal-dialog-centered modal-xl">
     <div class="modal-content">
       <div class="modal-body ratio ratio-16x9">
-        <iframe loading="lazy" src="<?php echo $youtube_embed; ?>"></iframe>
+        <iframe loading="lazy" src="<?php echo $youtube_embed; ?>&autoplay=1" autoplay></iframe>
       </div>
-      <button type="button" class="btn btn-secondary position-absolute bottom-0 end-0 m-3" data-bs-dismiss="modal">Close</button>
+      <button type="button" class="btn btn-primary position-absolute top-100 end-0 mt-3" data-bs-dismiss="modal">Close</button>
     </div>
   </div>
 
