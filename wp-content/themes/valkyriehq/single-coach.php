@@ -15,7 +15,7 @@
     </div>
 
     <div class="row mb-5">
-      <div class="col-xl mt-5">
+      <div class="col-xl mt-5 columns">
         <?php echo $about; ?>
       </div>
 
