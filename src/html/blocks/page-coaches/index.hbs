@@ -5,7 +5,7 @@
 
   $text = get_field('text');
 ?>
-<div class="page__coaches mt-md-n5 pb-5">
+<div class="page__coaches mt-md-n5 pb-5 position-relative">
   <div class="container-fluid pb-3">
     <div class="row justify-content-center">
       <?php
