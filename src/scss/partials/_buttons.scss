@@ -4,4 +4,16 @@
       color: white;
     }
   }
+
+  &-video {
+    &::after {
+      content: '';
+      position: absolute;
+      top: calc(50% - 5rem);
+      left: calc(50% - 5rem);
+      border-top: 5rem solid transparent;
+      border-bottom: 5rem solid transparent;
+      border-left: 8rem solid $primary;
+    }
+  }
 }

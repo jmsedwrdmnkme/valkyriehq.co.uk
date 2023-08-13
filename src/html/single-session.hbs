@@ -10,8 +10,8 @@
   <?php echo do_blocks('<!-- wp:acf/hero {"name":"acf/hero","data":{"field_64c92d131c364":"","field_64c92d131c3a7":{"title":"","url":"","target":""}},"mode":"preview"} /-->'); ?>
   <?php the_content(); ?>
 
-  <button type="button" class="ratio ratio-16x9 border-0" data-bs-toggle="modal" data-bs-target="#videoModal">
-    <img src="<?php echo $youtube_thumbnail; ?>" alt="Session intro video thumbnail" width="1280" height="720">
+  <button type="button" class="ratio ratio-16x9 border-0 btn-video" data-bs-toggle="modal" data-bs-target="#videoModal">
+    <img class="opacity-75" src="<?php echo $youtube_thumbnail; ?>" alt="Session intro video thumbnail" width="1280" height="720">
     <span class="d-none">Play session intro video</span>
   </button>
 
