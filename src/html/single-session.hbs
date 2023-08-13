@@ -21,7 +21,7 @@
     );
   ?>
   <?php if($coaches): ?>
-    <div class="border-bottom border-primary border-2 py-5">
+    <div class="component__coaches border-bottom border-primary border-2 py-5">
       <div class="container text-center">
         <h2 class="display-5">Meet the coaches</h2>
       </div>
@@ -36,7 +36,7 @@
               $permalink = get_permalink($coach_id);
               $role = get_field('role', $coach_id);
             ?>
-            <div class="col-md-6 col-lg-4 mt-4">
+            <div class="col-md-6 col-lg-3 mt-4">
               <a href="<?php echo $permalink; ?>" class="d-block position-relative text-white">
                 <div class="bottom-0 start-0 position-absolute z-1 m-3 pe-none">
                   <h2 class="bg-black d-inline-block px-1 mb-0 h3"><?php echo $title; ?></h2>
