@@ -82,7 +82,7 @@
   <script>
     const videoModal = document.getElementById('videoModal')
     const videoDom = videoModal.querySelector('iframe');
-    const videoSrc = videoDom.attribute('data-src');
+    const videoSrc = videoDom.getAttribute('data-src');
 
     videoModal.addEventListener('shown.bs.modal', event => {
       videoDom.src = videoSrc;
