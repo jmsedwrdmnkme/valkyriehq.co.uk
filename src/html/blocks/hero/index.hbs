@@ -28,7 +28,7 @@
           <div class="mt-3 h5 text-uppercase">Posted by <a href="#author" class="text-primary"><?php the_author(); ?></a> on <span class="text-primary"><?php the_date(); ?></span></div>
         </div>
       </div>
-      <?php elseif (is_singular('coach')) : ?>
+    <?php elseif (is_singular('coach')) : ?>
       <?php
         $role = get_field('role', $post_id);
         $links = get_field('links', $post_id);
@@ -63,6 +63,13 @@
           <?php endif; ?>
         </div>
       </div>
+    <?php elseif (is_singular('session')) : ?>
+      <?php
+        $tagline = get_field('tagline', $post_id);
+      ?>
+      <div class="h1 display-3 mt-5"><?php the_title(); ?></div>
+      <p class="lead mt-3"><?php echo $tagline; ?></p>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">Book a session</button>
     <?php else : ?>
       <div class="h1 display-3 mt-5"><?php the_title(); ?></div>
       <?php if ($text) : ?>
