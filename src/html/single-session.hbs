@@ -21,7 +21,7 @@
     );
   ?>
   <?php if($coaches): ?>
-    <div class="component__coaches border-bottom border-primary border-2 py-5">
+    <div class="component__coaches mt-5">
       <div class="container text-center">
         <h2 class="display-5">Meet the coaches</h2>
       </div>
@@ -50,6 +50,7 @@
           <?php endforeach; ?>
         </div>
       </div>
+      <div class="border-bottom border-primary border-2 container mt-5"></div>
     </div>
   <?php endif; ?>
 
