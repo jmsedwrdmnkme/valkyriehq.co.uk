@@ -34,7 +34,9 @@
           <a href="<?php the_permalink(); ?>" class="d-block position-relative text-white">
             <div class="bottom-0 left-0 m-3 position-absolute z-1 pe-none">
               <h3 class="bg-black d-inline-block mb-0 px-1"><?php the_title(); ?></h3>
-              <small class="bg-black col-lg-10 d-inline-block px-1"><?php the_field('tagline', get_the_ID()) ?></small>
+              <div>
+                <small class="bg-black col-lg-10 d-inline-block px-1"><?php the_field('tagline', get_the_ID()) ?></small>
+              </div>
             </div>
             <img loading="lazy" src="<?php echo $image_src; ?>" alt="<?php echo $image_alt; ?>" class="img-fluid w-100" width="735" height="415">
           </a>
