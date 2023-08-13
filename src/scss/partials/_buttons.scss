@@ -9,11 +9,11 @@
     &::after {
       content: '';
       position: absolute;
-      top: calc(50% - 5rem);
-      left: calc(50% - 5rem);
-      border-top: 5rem solid transparent;
-      border-bottom: 5rem solid transparent;
-      border-left: 8rem solid $primary;
+      top: calc(50% - 7.5vw);
+      left: calc(50% - 7.5vw);
+      border-top: 7.5vw solid transparent;
+      border-bottom: 7.5vw solid transparent;
+      border-left: 12vw solid $primary;
     }
   }
 }
