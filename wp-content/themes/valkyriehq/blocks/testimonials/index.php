@@ -33,7 +33,9 @@
                     </div>
                     <figure class="col-lg-6 mb-0 mt-3 mt-lg-0">
                       <blockquote class="blockquote mb-0">
-                        <p><?php the_field('quote', get_the_ID()) ?></p>
+                        <div>
+                          <?php the_field('quote', get_the_ID()) ?>
+                        </div>
                         <figcaption class="blockquote-footer">
                           <?php the_title(); ?>
                         </figcaption>
