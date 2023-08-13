@@ -2,6 +2,7 @@
 <?php
   $youtube_url = get_field('youtube_url');
   preg_match('%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', $youtube_url, $match);
+  $youtube_embed = '//youtube.com/embed/' . $match[1];
   $youtube_thumbnail = '//img.youtube.com/vi/' . $match[1] . '/maxresdefault.jpg';
   $description = get_field('description');
 ?>
@@ -72,7 +73,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-body ratio ratio-16x9">
-        <iframe loading="lazy" src="<?php echo $youtube_url; ?>"></iframe>
+        <iframe loading="lazy" src="<?php echo $youtube_embed; ?>"></iframe>
       </div>
       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
     </div>
