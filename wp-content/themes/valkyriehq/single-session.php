@@ -25,7 +25,7 @@
     <?php foreach($coaches as $coach) : ?>
       <?php 
         $coach_id = $coach->ID;
-        $role = get_the_field('role', $coach_id);
+        $role = get_field('role', $coach_id);
       ?>
       <?php echo get_the_title($coach_id); ?>
       <?php echo $role; ?>
