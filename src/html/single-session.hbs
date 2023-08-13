@@ -25,10 +25,23 @@
     <?php foreach($coaches as $coach) : ?>
       <?php 
         $coach_id = $coach->ID;
+        $image_alt = get_post_meta($coach_id, '_wp_attachment_image_alt', TRUE);
+        $image_src = get_the_post_thumbnail_url($coach_id, 'column-16x9');
+        $title = get_the_title($coach_id);
+        $permalink = get_permalink($coach_id);
         $role = get_field('role', $coach_id);
       ?>
-      <?php echo get_the_title($coach_id); ?>
-      <?php echo $role; ?>
+      <div class="col-md-6 col-lg-4 mt-4">
+        <a href="<?php echo $permalink; ?>" class="d-block position-relative text-white">
+          <div class="bottom-0 start-00 position-absolute z-1 m-3 pe-none">
+            <div class="bg-black d-inline-block px-1 text-center mb-0">
+              <h2><?php echo $title; ?></h2>
+              <div><?php echo $role; ?></div>
+            </div>
+          </div>
+          <img loading="lazy" src="<?php echo $image_src; ?>" alt="<?php echo $image_alt; ?>" class="img-fluid w-100" width="735" height="415">
+        </a>
+      </div>
     <?php endforeach; ?>
 
   <?php endif; ?>
