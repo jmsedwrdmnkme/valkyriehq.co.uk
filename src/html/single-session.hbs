@@ -34,11 +34,9 @@
           ?>
           <div class="col-md-6 col-lg-4 mt-4">
             <a href="<?php echo $permalink; ?>" class="d-block position-relative text-white">
-              <div class="bottom-0 start-00 position-absolute z-1 m-3 pe-none">
-                <div class="bg-black d-inline-block px-1 text-center mb-0">
-                  <h2><?php echo $title; ?></h2>
-                  <div><?php echo $role; ?></div>
-                </div>
+              <div class="bottom-0 start-0 position-absolute z-1 m-3 pe-none">
+                <h2 class="bg-black d-inline-block px-1 mb-0"><?php echo $title; ?></h2>
+                <div class="bg-black d-inline-block px-1 mb-0"><?php echo $role; ?></div>
               </div>
               <img loading="lazy" src="<?php echo $image_src; ?>" alt="<?php echo $image_alt; ?>" class="img-fluid w-100" width="735" height="415">
             </a>
