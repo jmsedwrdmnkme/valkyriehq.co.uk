@@ -14,7 +14,7 @@
       <?php echo $tagline; ?>
     </div>
 
-    <div class="row">
+    <div class="row mb-5">
       <div class="col-xl mt-5">
         <?php echo $about; ?>
       </div>
@@ -54,7 +54,7 @@
   </div>
 
   <?php if($sessions): ?>
-    <div class="component__coaches py-5 mt-3 mb-4">
+    <div class="component__coaches pb-5 mb-4">
       <div class="container text-center">
         <h2 class="display-5">Sessions <?php the_title(); ?> teaches&hellip;</h2>
       </div>
