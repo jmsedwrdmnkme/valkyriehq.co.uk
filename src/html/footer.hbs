@@ -18,12 +18,12 @@
               <use xlink:href="#twitter">
             </svg>
           </a>
-          <a href="youtube.com/watch?v=Fm7xxqp8mYs" target="_blank" class="d-inline-block mx-1">
+          -->
+          <a href="//youtube.com/@valkyriephysiotherapy9420" target="_blank" class="d-inline-block mx-1">
             <svg width="40" height="40">
               <use xlink:href="#youtube">
             </svg>
           </a>
-          -->
           <a href="//instagram.com/valkyrie.hq/" target="_blank" class="d-inline-block mx-1">
             <svg width="40" height="40">
               <use xlink:href="#instagram">
