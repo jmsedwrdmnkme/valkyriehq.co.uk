@@ -7,16 +7,18 @@
 
   <?php 
     global $post;
-    $coaches = get_posts(array(
-      'post_type' => 'coach',
-      'meta_query' => array(
-        array(
-          'key' => 'sessions',
-          'value' => '"' . $post->ID . '"',
-          'compare' => 'LIKE'
+    $coaches = get_posts(
+      array(
+        'post_type'=>'coach',
+        'meta_query'=>array(
+          array(
+            'key' => 'sessions',
+            'value' => '"'.$post->ID.'"',
+            'compare' => 'LIKE'
+          )
         )
       )
-    ));
+    );
   ?>
   <?php if($coaches): ?>
 
