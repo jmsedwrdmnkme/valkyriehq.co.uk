@@ -1,11 +1,18 @@
 <?php get_header(); ?>
 <?php
   $youtube_url = get_field('youtube_url');
+  preg_match('%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', $youtube_url, $match);
+  $youtube_id = $match[1];
+  $youtube_thumbnail = '//img.youtube.com/vi/' . $youtube_id . '/sddefault.jpg';
   $description = get_field('description');
 ?>
 <main id="main">
   <?php echo do_blocks('<!-- wp:acf/hero {"name":"acf/hero","data":{"field_64c92d131c364":"","field_64c92d131c3a7":{"title":"","url":"","target":""}},"mode":"preview"} /-->'); ?>
   <?php the_content(); ?>
+
+  <?php echo $youtube_url; ?><br>
+  <?php echo $youtube_id; ?><br>
+  <?php echo $youtube_thumbnail; ?>
 
   <?php
     global $post;
