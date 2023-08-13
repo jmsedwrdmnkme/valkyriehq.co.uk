@@ -20,13 +20,12 @@
       )
     );
   ?>
-
   <?php if($coaches): ?>
-    <div class="border-bottom border-primary border-2">
+    <div class="border-bottom border-primary border-2 py-5">
       <div class="container text-center">
         <h2 class="display-5">Meet the coaches</h2>
       </div>
-      <div class="container-fluid mt-1">
+      <div class="container-fluid mt-4 pb-3">
         <div class="row justify-content-center position-relative">
           <?php foreach($coaches as $coach) : ?>
             <?php 
