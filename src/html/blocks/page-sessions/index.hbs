@@ -32,7 +32,7 @@
             </a>
             <p class="lead"><?php the_field('tagline', get_the_ID()) ?></p>
             <a href="<?php the_permalink(); ?>" class="btn btn-outline-primary mt-2">Find out more</a>
-            <a href="<?php echo get_site_url(); ?>/book-a-session/" class="btn btn-primary mt-2 ms-2">Book a session</a>
+            <button type="button" class="btn btn-primary mt-2 ms-2" data-bs-toggle="modal" data-bs-target="#bookingModal">Book a session</button>
           </div>
         </div>
       </div>
