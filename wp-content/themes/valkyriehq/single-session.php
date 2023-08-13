@@ -78,6 +78,20 @@
       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
     </div>
   </div>
+
+  <script>
+    const videoModal = document.getElementById('videoModal')
+    const videoDom = videoModal.querySelector('imframe');
+
+    videoModal.addEventListener('shown.bs.modal', event => {
+      videoDom.load();
+      videoDom.play();
+    })
+
+    videoModal.addEventListener('hidden.bs.modal', event => {
+      videoDom.pause();
+    })
+  </script>
 </div>
 
 <?php get_footer(); ?>
