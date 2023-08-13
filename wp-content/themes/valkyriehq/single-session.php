@@ -70,7 +70,7 @@
 </main>
 
 <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
     <div class="modal-content">
       <div class="modal-body ratio ratio-16x9">
         <iframe loading="lazy" src="<?php echo $youtube_embed; ?>"></iframe>
