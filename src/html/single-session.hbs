@@ -6,7 +6,7 @@
   <?php the_content(); ?>
 
   <?php 
-    $sessions = get_posts(array(
+    $coaches = get_posts(array(
       'post_type' => 'coach',
       'meta_query' => array(
         array(
@@ -17,20 +17,13 @@
       )
     ));
   ?>
-  <?php if( $sessions ): ?>
+  <?php if($coaches): ?>
 
-    <?php foreach( $sessions as $session ): ?>
+    <?php foreach($coaches as $coach) : ?>
       <?php 
-        $session_id = $session->ID;
-        $photo = get_field('photo', $session->ID);
-
+        $coach_id = $coach->ID;
       ?>
-      <li>
-        <a href="<?php echo get_permalink( $session->ID ); ?>">
-          <img src="<?php echo $photo['url']; ?>" alt="<?php echo $photo['alt']; ?>" width="30" />
-          <?php echo get_the_title( $session->ID ); ?>
-        </a>
-      </li>
+      <?php echo get_the_title($coach_id); ?>
     <?php endforeach; ?>
 
   <?php endif; ?>
