@@ -5,6 +5,7 @@
 
   $title = get_field('title');
   $text = get_field('text');
+  $physio = get_field('show_physio');
 ?>
 <div class="component__coaches py-5">
   <div class="container text-center">
