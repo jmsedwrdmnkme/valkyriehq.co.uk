@@ -10,7 +10,6 @@
       <div class="text-center h2 display-5"><?php echo $title; ?></div>
       <div class="mt-4">
         <div class="bg-secondary py-5">
-          <?php echo do_shortcode('[instagram-feed feed=1]'); ?>
         </div>
       </div>
       <div class="text-center mt-4">
