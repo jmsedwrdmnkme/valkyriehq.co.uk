@@ -1,0 +1,9 @@
+.wp-block-embed__wrapper {
+  @extend .ratio;
+  @extend .ratio-16x9;
+
+  .wp-element-caption {
+    text-align: center;
+    font-style: italic;
+  }
+}
