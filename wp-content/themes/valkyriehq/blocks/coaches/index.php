@@ -20,7 +20,14 @@
     <div class="row justify-content-center position-relative">
       <?php
         $args = array(
-          'post_type' => 'coach'
+          'post_type' => 'coach',
+          'tax_query' => array(
+            array(
+              'taxonomy' => 'coach_type',
+              'field' => 'slug',
+              'terms' => 'physio',
+            ),
+          ),
         );
 
         $the_query = new WP_Query($args);
