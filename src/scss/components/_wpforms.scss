@@ -5,6 +5,11 @@
     @extend .form-control;
   }
 
+  select {
+    @extend .mt-3;
+    @extend .form-select;
+  }
+
   textarea {
     min-height: 7rem;
   }
