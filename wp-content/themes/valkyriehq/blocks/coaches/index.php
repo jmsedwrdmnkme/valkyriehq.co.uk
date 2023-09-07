@@ -20,7 +20,7 @@
     <div class="row justify-content-center position-relative">
       <?php
         if ($showPhysio) :
-          $argsPhysio = array(
+          $args = array(
             'post_type' => 'coach',
             'tax_query' => array(
               array(
