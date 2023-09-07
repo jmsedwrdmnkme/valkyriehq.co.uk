@@ -177,13 +177,13 @@ function valkyrie_allowed_block_types ($block_editor_context, $editor_context) {
 			'acf/page-coaches',
 			'acf/page-contact',
 			'acf/page-blog',
-			'acf/post-coaches'
+			'acf/post-coaches',
 			'core/video',
-      'core/embed',
-      'core/button',
-      'core/column',
-      'core/group',
-      'core/spacer',
+			'core/embed',
+			'core/button',
+			'core/column',
+			'core/group',
+			'core/spacer',
 		);
 	}
 	return $block_editor_context;
