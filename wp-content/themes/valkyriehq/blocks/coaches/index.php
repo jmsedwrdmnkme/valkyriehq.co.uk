@@ -31,7 +31,10 @@
           $isPhysio = get_field($post_id, 'is_physio');
 
           if ($physio) :
+            echo $physio;
+
             if ($isPhysio) :
+              echo $isPhysio;
       ?>
           <div class="col-md-6 col-lg-3 mt-4">
             <a href="<?php the_permalink(); ?>" class="d-block position-relative text-white">
