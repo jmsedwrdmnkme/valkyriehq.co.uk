@@ -5,7 +5,7 @@
 
   $title = get_field('title');
   $text = get_field('text');
-  $physio = get_field('show_physio');
+  $show_physio = get_field('show_physio');
 ?>
 <div class="component__coaches py-5">
   <div class="container text-center">
@@ -19,22 +19,31 @@
   <div class="container-fluid mt-1">
     <div class="row justify-content-center position-relative">
       <?php
+        $argsPhysio = array(
+          'post_type' => 'coach',
+          'tax_query' => array(
+            array(
+              'taxonomy'  => 'age-group',
+              'field'     => 'slug',
+              'terms'     => '18-to-25',
+            )
+        );
+
         $args = array(
           'post_type' => 'coach'
         );
-        $the_query = new WP_Query($args);
+
+        if ($show_physio) :
+          $the_query = new WP_Query($argsPhysio);
+        else :
+          $the_query = new WP_Query($args);
+        endif;
+
         while ($the_query -> have_posts()) :
           $the_query -> the_post();
           $post_id = get_the_ID();
           $image_alt = get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', TRUE);
           $image_src = get_the_post_thumbnail_url($post_id, 'column-16x9');
-          $isPhysio = get_field($post_id, 'is_physio');
-
-          if ($physio) :
-            echo $physio;
-
-            if ($isPhysio) :
-              echo $isPhysio;
       ?>
           <div class="col-md-6 col-lg-3 mt-4">
             <a href="<?php the_permalink(); ?>" class="d-block position-relative text-white">
@@ -45,24 +54,9 @@
             </a>
           </div>
         <?php
-            endif;
-          else :
+          endwhile;
+          wp_reset_postdata();
         ?>
-          <div class="col-md-6 col-lg-3 mt-4">
-            <a href="<?php the_permalink(); ?>" class="d-block position-relative text-white">
-              <div class="bottom-0 start-00 position-absolute z-1 m-3 pe-none">
-                <h3 class="bg-black d-inline-block px-1 text-center mb-0"><?php the_title(); ?></h3>
-              </div>
-              <img loading="lazy" src="<?php echo $image_src; ?>" alt="<?php echo $image_alt; ?>" class="img-fluid w-100" width="735" height="415">
-            </a>
-          </div>
-        <?php
-          endif;
-        ?>
-      <?php
-        endwhile;
-        wp_reset_postdata();
-      ?>
     </div>
   </div>
   <div class="mt-4 pt-3 text-center pb-3">
