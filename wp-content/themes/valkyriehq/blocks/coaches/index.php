@@ -5,7 +5,7 @@
 
   $title = get_field('title');
   $text = get_field('text');
-  $show_physio = get_field('show_physio');
+  $showPhysio = get_field('show_physio');
 ?>
 <div class="component__coaches py-5">
   <div class="container text-center">
@@ -19,26 +19,24 @@
   <div class="container-fluid mt-1">
     <div class="row justify-content-center position-relative">
       <?php
-        $argsPhysio = array(
-          'post_type' => 'coach',
-          'tax_query' => array(
-            array(
-              'taxonomy'  => 'age-group',
-              'field'     => 'slug',
-              'terms'     => '18-to-25',
-            )
-        );
-
-        $args = array(
-          'post_type' => 'coach'
-        );
-
-        if ($show_physio) :
-          $the_query = new WP_Query($argsPhysio);
+        if ($showPhysio) :
+          $argsPhysio = array(
+            'post_type' => 'coach',
+            'tax_query' => array(
+              array(
+                'taxonomy'  => 'coach_type',
+                'field'     => 'slug',
+                'terms'     => 'physio',
+                'operator' => 'IN'
+              )
+          );
         else :
-          $the_query = new WP_Query($args);
+          $args = array(
+            'post_type' => 'coach'
+          );
         endif;
 
+        $the_query = new WP_Query($args);
         while ($the_query -> have_posts()) :
           $the_query -> the_post();
           $post_id = get_the_ID();
