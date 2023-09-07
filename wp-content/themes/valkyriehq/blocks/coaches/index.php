@@ -54,8 +54,7 @@
             </a>
           </div>
         <?php
-            endif;
-          else :
+          endif;
         ?>
       <?php
         endwhile;
