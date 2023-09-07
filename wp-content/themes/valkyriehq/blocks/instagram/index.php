@@ -12,6 +12,7 @@
         <div class="bg-secondary py-5">
           <div class="p-5 m-4 text-center">
             Instagram feed
+            [instagram-feed feed=1]
           </div>
         </div>
       </div>
