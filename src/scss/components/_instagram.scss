@@ -3,6 +3,8 @@
 
   .sb_instagram_header,
   .sbi_load {
-    display: none !important;
+    > * {
+      display: none !important;
+    }
   }
 }

@@ -181,7 +181,9 @@ function valkyrie_allowed_block_types ($block_editor_context, $editor_context) {
 			'core/video',
 			'core/embed',
 			'core/button',
+			'core/buttons',
 			'core/column',
+			'core/columns',
 			'core/group',
 			'core/spacer',
 		);
