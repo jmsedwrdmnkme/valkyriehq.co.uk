@@ -19,16 +19,22 @@
   <div class="container-fluid mt-1">
     <div class="row justify-content-center position-relative">
       <?php
-        $args = array(
-          'post_type' => 'coach',
-          'tax_query' => array(
-            array(
-              'taxonomy' => 'coach_type',
-              'field' => 'slug',
-              'terms' => 'physio',
+        if ($showPhysio ) :
+          $args = array(
+            'post_type' => 'coach',
+            'tax_query' => array(
+              array(
+                'taxonomy' => 'coach_type',
+                'field' => 'slug',
+                'terms' => 'physio',
+              ),
             ),
-          ),
-        );
+          );
+        else :
+          $args = array(
+            'post_type' => 'coach'
+          );
+        endif;
 
         $the_query = new WP_Query($args);
         while ($the_query -> have_posts()) :
