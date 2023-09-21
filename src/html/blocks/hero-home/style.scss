@@ -23,4 +23,8 @@
 .component__hero-home {
   overflow: hidden;
   max-height: 75vh;
+
+  &--video {
+    min-width: 55rem;
+  }
 }
