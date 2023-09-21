@@ -15,6 +15,8 @@
     $link_target = $button_link['target'] ? $button_link['target'] : '_self';
   }
 
+  $vimeo_url = get_field('vimeo_url');
+
   $image_id = $post->ID;
     $image_alt = get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', TRUE);
     $image_desktop = get_the_post_thumbnail_url($image_id, 'hero-home-desktop');
@@ -32,9 +34,13 @@
       <?php endif; ?>
     </div>
   </div>
-  <picture class="opacity-50 w-100">
-    <source media="(max-width: 767.98px)" srcset="<?php echo $image_mobile; ?>">
-    <source media="(min-width: 768px)" srcset="<?php echo $image_desktop; ?>">
-    <img class="img-fluid w-100" src="<?php echo $image_desktop; ?>" height="768" width="1366" alt="<?php echo $image_alt; ?>">
-  </picture>
+  <?php if ($vimeo_url) : ?>
+    <iframe class="opacity-50 w-100" src="<?php echo $vimeo_url; ?>&autoplay=1&loop=1&autopause=0&?background=1&muted=1" width="1920" height="1080" frameborder="0" allow="autoplay; fullscreen" autoplay muted allowfullscreen>
+  <?php elseif : ?>
+    <picture class="opacity-50 w-100">
+      <source media="(max-width: 767.98px)" srcset="<?php echo $image_mobile; ?>">
+      <source media="(min-width: 768px)" srcset="<?php echo $image_desktop; ?>">
+      <img class="img-fluid w-100" src="<?php echo $image_desktop; ?>" height="768" width="1366" alt="<?php echo $image_alt; ?>">
+    </picture>
+  <?php endif; ?>
 </div>
