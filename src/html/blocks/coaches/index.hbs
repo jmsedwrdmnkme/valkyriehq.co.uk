@@ -66,6 +66,10 @@
     </div>
   </div>
   <div class="mt-4 pt-3 text-center pb-3">
-    <a href="<?php echo get_site_url(); ?>/coaches/" class="btn btn-outline-primary">Meet our coaches</a>
+    <?php if ($showPhysio ) : ?>
+      <a href="<?php echo get_site_url(); ?>/physiotherapy/" class="btn btn-outline-primary">Meet our physiotherapists</a>
+    <?php else : ?>
+      <a href="<?php echo get_site_url(); ?>/coaches/" class="btn btn-outline-primary">Meet our coaches</a>
+    <?php endif; ?>
   </div>
 </div>
