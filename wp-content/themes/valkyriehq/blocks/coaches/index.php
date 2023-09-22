@@ -26,7 +26,7 @@
               array(
                 'taxonomy' => 'coach_type',
                 'field' => 'slug',
-                'terms' => 'physio',
+                'terms' => 'physio'
               ),
             ),
           );
