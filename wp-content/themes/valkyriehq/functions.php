@@ -30,6 +30,15 @@ function valkyriehq_scripts() {
   wp_enqueue_script( 'valkyriehq-script', get_template_directory_uri() . '/script.js', array(), wp_get_theme()->get( 'Version' ) );
 }
 
+// remove dashicons in frontend to non-admin 
+function wpdocs_dequeue_dashicon() {
+  if (current_user_can( 'update_core' )) {
+    return;
+  }
+  wp_deregister_style('dashicons');
+}
+add_action( 'wp_enqueue_scripts', 'wpdocs_dequeue_dashicon' );
+
 // bootstrap 5 wp_nav_menu walker
 class bootstrap_5_wp_nav_menu_walker extends Walker_Nav_menu {
   private $current_item;
