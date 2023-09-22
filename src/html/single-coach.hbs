@@ -2,6 +2,7 @@
 <?php
   $tagline = get_field('tagline');
   $about = get_field('about');
+  $booking_email = get_field('booking_email');
   $gallery = get_field('gallery');
   $sessions = get_field('sessions');
 ?>
@@ -20,8 +21,8 @@
       </div>
 
       <?php if($gallery): ?>
-        <div class="col-xl-6 mt-4 mt-lg-5 d-none d-md-block ps-xl-5">
-          <div class="glide">
+        <div class="col-xl-6 mt-4 mt-lg-5 ps-xl-5 text-center">
+          <div class="glide d-none d-md-block mb-4">
             <div class="glide__track mx-5 mx-xl-4" data-glide-el="track">
               <ul class="glide__slides">
                 <?php foreach($gallery as $media): 
@@ -48,6 +49,15 @@
               </button>
             </div>
           </div>
+          <?php 
+            $link = get_field('booking_email');
+            if( $link ): 
+                $link_url = $link['url'];
+                $link_title = $link['title'];
+                $link_target = $link['target'] ? $link['target'] : '_self';
+                ?>
+                <a class="btn btn-primary" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+            <?php endif; ?>
         </div>
       <?php endif; ?>
     </div>
