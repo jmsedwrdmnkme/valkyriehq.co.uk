@@ -11,16 +11,19 @@
       <?php echo do_shortcode('[instagram-feed feed=1]'); ?>
       <div class="text-center mt-4">
         <a href="//facebook.com/hqvalkyrie/" target="_blank" class="d-inline-block mx-1">
+          <span class="visually-hidden">Facebook</span>
           <svg width="40" height="40">
             <use xlink:href="#facebook">
           </svg>
         </a>
         <a href="//youtube.com/@valkyriephysiotherapy9420" target="_blank" class="d-inline-block mx-1">
+          <span class="visually-hidden">YouTube</span>
           <svg width="40" height="40">
             <use xlink:href="#youtube">
           </svg>
         </a>
         <a href="//instagram.com/valkyrie.hq/" target="_blank" class="d-inline-block mx-1">
+          <span class="visually-hidden">Instagram</span>
           <svg width="40" height="40">
             <use xlink:href="#instagram">
           </svg>
