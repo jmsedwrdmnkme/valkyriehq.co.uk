@@ -8,11 +8,6 @@
         <small class="d-block mt-4 pt-2 col-xl-10"><?php echo get_option('blogdescription'); ?></small>
         <div class="mt-3 mx-n1">
           <a href="//facebook.com/hqvalkyrie/" target="_blank" class="d-inline-block mx-1">
-            <svg width="40" height="40">
-              <use xlink:href="#facebook">
-            </svg>
-          </a>
-          <a href="//facebook.com/hqvalkyrie/" target="_blank" class="d-inline-block mx-1">
             <span class="visually-hidden">Facebook</span>
             <svg width="40" height="40">
               <use xlink:href="#facebook">
