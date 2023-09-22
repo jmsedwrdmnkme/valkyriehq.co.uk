@@ -40,6 +40,7 @@
                 'terms' => 'physio',
                 'operator'  => 'NOT IN'
               ),
+            ),
           );
         endif;
 
