@@ -36,7 +36,7 @@
     </div>
   </div>
   <?php if( have_rows('video_file') ): ?>
-    <?php while( have_rows('hero') ): the_row(); 
+    <?php while( have_rows('video_file') ): the_row(); 
       $webm = get_sub_field('webm');
       $mp4 = get_sub_field('mp4');
     ?>
