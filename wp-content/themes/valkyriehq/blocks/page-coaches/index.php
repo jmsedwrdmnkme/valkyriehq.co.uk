@@ -10,7 +10,15 @@
     <div class="row justify-content-center">
       <?php
         $args = array(
-          'post_type' => 'coach'
+          'post_type' => 'coach',
+          'tax_query' => array(
+            array(
+              'taxonomy' => 'coach_type',
+              'field' => 'slug',
+              'terms' => 'physio',
+              'operator'  => 'NOT IN'
+            ),
+          ),
         );
         $the_query = new WP_Query($args);
         while ($the_query -> have_posts()) :
