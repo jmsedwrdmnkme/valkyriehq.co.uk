@@ -36,7 +36,7 @@
   </div>
   <?php if ($vimeo_url) : ?>
     <div class="ratio ratio-16x9 pe-none component__hero-home--video">
-      <iframe loading="lazy" title="Valkyrie HQ strength and fitness gym" src="<?php echo $vimeo_url; ?>&autoplay=1&loop=1&autopause=0&?background=1&muted=1" width="1920" height="780" frameborder="0" allow="autoplay; fullscreen" autoplay muted loop playsinline></iframe>
+      <iframe title="Valkyrie HQ strength and fitness gym" src="<?php echo $vimeo_url; ?>&autoplay=1&loop=1&autopause=0&?background=1&muted=1" width="1920" height="780" frameborder="0" allow="autoplay; fullscreen" autoplay muted loop playsinline></iframe>
     </div>
   <?php else : ?>
     <picture class="opacity-50 w-100">
