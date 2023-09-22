@@ -15,6 +15,7 @@
     $link_target = $button_link['target'] ? $button_link['target'] : '_self';
   }
 
+  $video_file = get_field('video_file');
   $vimeo_url = get_field('vimeo_url');
 
   $image_id = $post->ID;
@@ -34,7 +35,18 @@
       <?php endif; ?>
     </div>
   </div>
-  <?php if ($vimeo_url) : ?>
+  <?php if ($video_file) : ?>
+    <div class="ratio ratio-16x9 pe-none component__hero-home--video">
+      <video width="1920" height="780" preload="metadata" autoplay loop muted playsinline>
+        <?php if ($video_file[webm]) : ?>
+          <source src="<?php echo $video_file[webm]; ?>" type="video/webm" />
+        <?php endif; ?>
+        <?php if ($video_file[mp4]) : ?>
+          <source src="<?php echo $video_file[mp4]; ?>" type="video/mp4" />
+        <?php endif; ?>
+      </video>
+    </div>
+  <?php elseif ($vimeo_url) : ?>
     <div class="ratio ratio-16x9 pe-none component__hero-home--video">
       <iframe title="Valkyrie HQ strength and fitness gym" src="<?php echo $vimeo_url; ?>&autoplay=1&loop=1&autopause=0&?background=1&muted=1" width="1920" height="780" frameborder="0" allow="autoplay; fullscreen" autoplay muted loop playsinline></iframe>
     </div>
