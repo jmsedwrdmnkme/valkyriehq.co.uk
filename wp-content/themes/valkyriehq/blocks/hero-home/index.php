@@ -36,11 +36,8 @@
   </div>
   <?php if ($vimeo_url) : ?>
     <div class="ratio ratio-16x9 pe-none component__hero-home--video">
-      <lite-vimeo videoid="866817041" style="background-image: url('https://i.vimeocdn.com/video/866817041.webp?h=8c1cfc8bd3&mw=1600&mh=900&q=70');">
-        <div class="ltv-playbtn"></div>
-      </lite-vimeo>
+      <iframe loading="lazy" title="Valkyrie HQ strength and fitness gym" src="<?php echo $vimeo_url; ?>&autoplay=1&loop=1&autopause=0&?background=1&muted=1" width="1920" height="780" frameborder="0" allow="autoplay; fullscreen" autoplay muted loop playsinline></iframe>
     </div>
-    <script src="http://unpkg.com/lite-vimeo-embed"></script>
   <?php else : ?>
     <picture class="opacity-50 w-100">
       <source media="(max-width: 767.98px)" srcset="<?php echo $image_mobile; ?>">
