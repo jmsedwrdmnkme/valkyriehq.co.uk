@@ -35,7 +35,23 @@
       <?php endif; ?>
     </div>
   </div>
-  <?php if ($vimeo_url) : ?>
+  <?php if( have_rows('video_file') ): ?>
+    <?php while( have_rows('hero') ): the_row(); 
+      $webm = get_sub_field('webm');
+      $mp4 = get_sub_field('mp4');
+    ?>
+      <div class="ratio ratio-16x9 pe-none component__hero-home--video">
+        <video width="1920" height="780" preload="metadata" autoplay loop muted playsinline>
+          <?php if ($webm) : ?>
+            <source src="<?php echo $webm; ?>" type="video/webm" />
+          <?php endif; ?>
+          <?php if ($mp4) : ?>
+            <source src="<?php echo $mp4; ?>" type="video/mp4" />
+          <?php endif; ?>
+        </video>
+      </div>
+    <?php endwhile; ?>
+  <?php elseif ($vimeo_url) : ?>
     <div class="ratio ratio-16x9 pe-none component__hero-home--video">
       <iframe title="Valkyrie HQ strength and fitness gym" src="<?php echo $vimeo_url; ?>&autoplay=1&loop=1&autopause=0&?background=1&muted=1" width="1920" height="780" frameborder="0" allow="autoplay; fullscreen" autoplay muted loop playsinline></iframe>
     </div>
