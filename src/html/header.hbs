@@ -3,9 +3,6 @@
 <head>
   <meta charset="<?php bloginfo( 'charset' ); ?>" />
   <meta name="viewport" content="width=device-width" />
-  <link rel="preconnect" href="https://player.vimeo.com">
-  <link rel="preconnect" href="https://i.vimeocdn.com">
-  <link rel="preconnect" href="https://f.vimeocdn.com">
   <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
