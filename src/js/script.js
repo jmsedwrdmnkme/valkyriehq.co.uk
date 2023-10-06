@@ -1,6 +1,7 @@
 // Bootstrap
 // Navbar
-import { Collapse, Dropdown } from 'bootstrap/js/dist/collapse.js'
+import { Collapse, Dropdowns } from 'bootstrap/js/dist/collapse.js'
+import * as Popper from "@popperjs/core";
 
 // Glide carousel
 import Glide, { Controls, Breakpoints } from '@glidejs/glide/dist/glide.modular.esm.js'
